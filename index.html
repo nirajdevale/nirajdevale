@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niraj Devale – Product Operations Analyst · Financial Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0F172A;
+      --bg-card: #1E293B;
+      --bg-card2: #162032;
+      --border: #2D3F5A;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --accent: #10B981;
+      --accent-dim: #059669;
+      --accent-blue: #38BDF8;
+      --font: 'Inter', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; overflow-x: hidden; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 64px;
+      background: rgba(15,23,42,0.88); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.03em; color: var(--text); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.45rem 1.1rem;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      color: #0F172A;
+      font-size: 0.8rem; font-weight: 700;
+      text-decoration: none; letter-spacing: 0.03em;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: #059669; border-color: #059669; }
+    .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; }
+    .mobile-menu {
+      display: none; position: fixed; top: 64px; left: 0; right: 0;
+      background: rgba(15,23,42,0.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 5%; z-index: 99; flex-direction: column; gap: 1.25rem;
+    }
+    .mobile-menu a { color: var(--text-muted); text-decoration: none; font-size: 1rem; font-weight: 500; }
+    .mobile-menu a:hover { color: var(--accent); }
+    .mobile-menu.open { display: flex; }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 8rem 5% 5rem;
+      position: relative; overflow: hidden;
+    }
+    .hero-grid-bg {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(to right, rgba(45,63,90,0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(45,63,90,0.3) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, black 40%, transparent 100%);
+    }
+    .hero-pulse {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      animation: pulse-line 3s ease-in-out infinite;
+    }
+    @keyframes pulse-line {
+      0%, 100% { opacity: 0.2; transform: scaleX(0.6); }
+      50% { opacity: 1; transform: scaleX(1); }
+    }
+    .hero-eyebrow {
+      display: inline-block; font-family: var(--mono); font-size: 0.75rem;
+      letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase;
+      margin-bottom: 1.25rem; padding: 0.3rem 0.8rem;
+      border: 1px solid rgba(16,185,129,0.3); border-radius: 100px;
+      background: rgba(16,185,129,0.06);
+    }
+    .hero-name {
+      font-size: clamp(3rem, 8vw, 6rem); font-weight: 900;
+      letter-spacing: -0.04em; line-height: 1.0; margin-bottom: 0.6rem;
+      background: linear-gradient(135deg, #F8FAFC 60%, #94A3B8);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero-role {
+      font-size: clamp(1rem, 2.5vw, 1.25rem); font-weight: 600;
+      color: #CBD5E1; letter-spacing: -0.01em; margin-bottom: 0.4rem;
+    }
+    .hero-tagline { font-size: 0.875rem; color: var(--text-muted); letter-spacing: 0.04em; margin-bottom: 2rem; }
+    .hero-summary { max-width: 660px; font-size: 1.0625rem; color: #CBD5E1; line-height: 1.75; margin-bottom: 2.5rem; }
+    .hero-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-bottom: 3.5rem; }
+    .tag {
+      padding: 0.35rem 0.85rem; background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 100px; font-size: 0.8rem; font-weight: 500; color: var(--text-muted); letter-spacing: 0.02em;
+      transition: all 0.2s;
+    }
+    .tag:hover { border-color: var(--accent); color: var(--accent); }
+    .tag-exp {
+      padding: 0.35rem 1rem; background: rgba(16,185,129,0.12);
+      border: 1px solid rgba(16,185,129,0.35); border-radius: 100px;
+      font-size: 0.8rem; font-weight: 700; color: var(--accent); letter-spacing: 0.03em;
+    }
+    .hero-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+      max-width: 700px; width: 100%;
+    }
+    .hero-stat { background: var(--bg-card); padding: 1.75rem 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+    .hero-stat-num { font-size: 2.25rem; font-weight: 800; color: var(--accent); letter-spacing: -0.04em; line-height: 1; }
+    .hero-stat-label { font-size: 0.75rem; color: var(--text-muted); text-align: center; line-height: 1.4; }
+
+    /* SECTION COMMON */
+    section { padding: 6rem 5%; }
+    .section-label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.75rem; }
+    .section-title { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1rem; }
+    .section-divider { width: 40px; height: 2px; background: var(--accent); margin-bottom: 3rem; }
+
+    /* AT A GLANCE */
+    #glance { background: var(--bg-card2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 5%; }
+    .glance-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .glance-item { background: var(--bg-card); padding: 2rem 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .glance-num { font-size: 2rem; font-weight: 800; color: var(--accent-blue); letter-spacing: -0.04em; line-height: 1; }
+    .glance-desc { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; }
+    .glance-award { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.06em; color: #FBBF24; }
+
+    /* ABOUT */
+    #about-section { padding: 6rem 5%; }
+    .about-top { display: grid; grid-template-columns: 1fr 340px; gap: 4rem; align-items: start; max-width: 1100px; margin: 0 auto 3rem; }
+    .about-bio { font-size: 1rem; color: #CBD5E1; line-height: 1.85; text-align: justify; }
+    .about-bio p { margin-bottom: 1rem; }
+    .about-bio strong { color: var(--text); font-weight: 600; }
+    .about-bio .inline-client { color: var(--accent-blue); font-weight: 600; }
+    .about-photo-wrap { position: relative; }
+    .about-photo {
+      width: 100%; aspect-ratio: 3/4; border-radius: 14px; overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+    }
+    .about-photo-placeholder {
+      width: 100%; height: 100%;
+      background: linear-gradient(160deg, #1E293B 0%, #162032 50%, #1E293B 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.75rem;
+    }
+    .about-photo-initials {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: rgba(16,185,129,0.12); border: 2px solid rgba(16,185,129,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.75rem; font-weight: 800; color: var(--accent); letter-spacing: -0.04em;
+    }
+    .about-photo-name { font-size: 0.75rem; color: var(--text-muted); font-family: var(--mono); letter-spacing: 0.06em; }
+    .about-photo-hint { font-size: 0.68rem; color: rgba(148,163,184,0.5); font-family: var(--mono); margin-top: 0.25rem; }
+
+    /* SKILLS STRIP — full width below bio+photo */
+    .skills-strip { max-width: 1100px; margin: 0 auto; border-top: 1px solid var(--border); padding-top: 2rem; }
+    .skills-strip-label { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .skills-strip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill-chip { padding: 0.3rem 0.75rem; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); border-radius: 6px; font-size: 0.78rem; color: #A7F3D0; font-weight: 500; }
+    .skill-chip.blue { background: rgba(56,189,248,0.08); border-color: rgba(56,189,248,0.2); color: #BAE6FD; }
+    .skill-chip.purple { background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.2); color: #DDD6FE; }
+
+    /* EXPERIENCE */
+    #experience { background: var(--bg-card2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+    .exp-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 2rem; position: relative; overflow: hidden; transition: border-color 0.2s;
+    }
+    .exp-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); }
+    .exp-card:hover { border-color: rgba(16,185,129,0.4); }
+    .exp-role { font-size: 1.125rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem; }
+    .exp-company { font-size: 0.875rem; color: var(--accent); font-weight: 600; margin-bottom: 0.2rem; }
+    .exp-meta { font-size: 0.75rem; color: var(--text-muted); font-family: var(--mono); letter-spacing: 0.04em; margin-bottom: 1.25rem; }
+    .exp-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .exp-list li { font-size: 0.875rem; color: #CBD5E1; line-height: 1.6; padding-left: 1.25rem; position: relative; }
+    .exp-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.75rem; top: 0.15em; }
+    .exp-badge { display: inline-block; padding: 0.2rem 0.6rem; background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.25); border-radius: 4px; font-size: 0.68rem; font-weight: 600; color: #FBBF24; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem; }
+
+    /* PLATFORM THINKING */
+    #platform { padding: 6rem 5%; }
+    .platform-wrap { max-width: 960px; margin: 0 auto; }
+    .platform-inner { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 3rem; position: relative; overflow: hidden; }
+    .platform-inner::after { content: ''; position: absolute; bottom: -40px; right: -40px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(16,185,129,0.07) 0%, transparent 70%); pointer-events: none; }
+    .platform-headline { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.3; margin-bottom: 1.5rem; }
+    .platform-headline em { font-style: normal; color: var(--accent); }
+    .platform-body { font-size: 0.9375rem; color: #CBD5E1; line-height: 1.8; margin-bottom: 1rem; text-align: justify; }
+    .platform-body strong { color: var(--text); font-weight: 600; }
+    .platform-body .client-name { color: var(--accent-blue); font-weight: 600; }
+    .platform-layers { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+    .layer-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; }
+    .layer-label { font-size: 0.68rem; font-family: var(--mono); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .layer-label.human { color: var(--accent); }
+    .layer-label.ai { color: #A78BFA; }
+    .layer-items { display: flex; flex-direction: column; gap: 0.5rem; }
+    .layer-item { font-size: 0.82rem; color: #CBD5E1; line-height: 1.5; padding-left: 1rem; position: relative; }
+    .layer-item::before { content: '·'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .layer-item.ai-item::before { color: #A78BFA; }
+
+    /* CASE STUDY */
+    #casestudy { background: var(--bg-card2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .cs-banner { max-width: 1100px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .cs-banner-header { padding: 2.5rem 3rem; border-bottom: 1px solid var(--border); background: linear-gradient(135deg, rgba(16,185,129,0.05) 0%, transparent 60%); }
+    .cs-label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.75rem; }
+    .cs-title { font-size: clamp(1.25rem, 3vw, 1.75rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.25; margin-bottom: 0.75rem; }
+    .cs-desc { font-size: 0.9rem; color: #94A3B8; line-height: 1.6; max-width: 640px; }
+    .cs-index { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 2rem 3rem; border-bottom: 1px solid var(--border); }
+    .cs-index-chip { padding: 0.35rem 0.85rem; background: rgba(16,185,129,0.07); border: 1px solid rgba(16,185,129,0.2); border-radius: 6px; font-size: 0.78rem; color: #A7F3D0; font-weight: 500; }
+    .cs-cta-bar { padding: 1.5rem 3rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .cs-cta-note { font-size: 0.8125rem; color: var(--text-muted); }
+    .cs-link { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.5rem; background: var(--accent); color: #0F172A; font-size: 0.875rem; font-weight: 700; border-radius: 8px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .cs-link:hover { background: #059669; transform: translateY(-1px); }
+
+    /* CONTACT */
+    #contact { padding: 6rem 5%; }
+    .contact-wrap { max-width: 700px; margin: 0 auto; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+    .contact-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; }
+    .contact-card-label { font-size: 0.68rem; font-family: var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; }
+    .contact-card-val { font-size: 0.9rem; color: var(--text); font-weight: 500; }
+    .contact-card-val a { color: var(--accent); text-decoration: none; }
+    .contact-card-val a:hover { text-decoration: underline; }
+    .contact-card.full { grid-column: 1 / -1; }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2rem 5%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-name { font-weight: 700; font-size: 0.9rem; }
+    .footer-name span { color: var(--accent); }
+    .footer-note { font-size: 0.75rem; color: var(--text-muted); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .about-top { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-photo-wrap { max-width: 280px; }
+      .exp-grid { grid-template-columns: 1fr; }
+      .glance-grid { grid-template-columns: 1fr 1fr; }
+      .platform-layers { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .hero-stats { grid-template-columns: 1fr; }
+      .glance-grid { grid-template-columns: 1fr; }
+      .cs-banner-header, .cs-index, .cs-cta-bar { padding: 1.5rem; }
+      section { padding: 4rem 5%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="nav-logo">Niraj<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about-section">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#platform">Platform Thinking</a></li>
+    <li><a href="#casestudy">Case Study</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="Niraj_Devale_Resume.pdf" download class="nav-cta">↓ Download CV</a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about-section" onclick="closeMenu()">About</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#platform" onclick="closeMenu()">Platform Thinking</a>
+  <a href="#casestudy" onclick="closeMenu()">Case Study</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="Niraj_Devale_Resume.pdf" download style="color:#0F172A;background:var(--accent);padding:0.4rem 1rem;border-radius:6px;font-weight:700;">↓ Download CV</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-pulse"></div>
+  <div class="hero-eyebrow">Open to Global Hybrid Opportunities &nbsp;·&nbsp; Relocation Ready</div>
+  <h1 class="hero-name">Niraj Devale</h1>
+  <p class="hero-role">Product Operations Analyst · Financial Services</p>
+  <p class="hero-tagline">Morningstar Inc. · Mumbai</p>
+  <p class="hero-summary">
+    Product Operations Analyst at Morningstar with a background in engineering and market research. Experienced in onboarding enterprise clients, authoring user stories, automating reporting pipelines, and managing operational workflows for investment and portfolio data across financial services.
+  </p>
+  <div class="hero-tags">
+    <span class="tag-exp">2.5+ Years Experience</span>
+    <span class="tag">Product Operations</span>
+    <span class="tag">Workflow Automation</span>
+    <span class="tag">User Story Writing</span>
+    <span class="tag">Market Research</span>
+    <span class="tag">Data Analytics</span>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-num">80%</span>
+      <span class="hero-stat-label">Manual Effort Eliminated across 5 Scheduled Reporting Pipelines</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">25+</span>
+      <span class="hero-stat-label">AWS QuickSight Dashboards Built for Portfolio & Compliance Monitoring</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">100+</span>
+      <span class="hero-stat-label">Market Research Reports Delivered across 30+ Industries</span>
+    </div>
+  </div>
+</section>
+
+<!-- AT A GLANCE -->
+<section id="glance">
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <div class="section-label">Measurable Outcomes</div>
+    <h2 class="section-title">At a Glance</h2>
+  </div>
+  <div class="glance-grid reveal">
+    <div class="glance-item">
+      <span class="glance-num">15+</span>
+      <span class="glance-desc">User stories authored for feature enhancements and reporting tools with complete UAT execution</span>
+    </div>
+    <div class="glance-item">
+      <span class="glance-num">80%</span>
+      <span class="glance-desc">Reduction in ad-hoc data requests for advisor and operations teams via centralized dashboards</span>
+    </div>
+    <div class="glance-item">
+      <span class="glance-num">40%</span>
+      <span class="glance-desc">Reduction in research turnaround time achieved by building Python ETL data pipelines</span>
+    </div>
+    <div class="glance-item">
+      <span class="glance-award">⭐ Q1 2025 Award</span>
+      <span class="glance-desc" style="margin-top:0.35rem;"><strong style="color:var(--text)">"Star of the Quarter"</strong> at Morningstar for rapid cross-functional delivery in the first quarter</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about-section">
+  <div class="about-top">
+    <div class="reveal">
+      <div class="section-label">Background</div>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-divider"></div>
+      <div class="about-bio">
+        <p>I work at the intersection of financial services operations, data engineering, and product delivery. At Morningstar, I manage end-to-end operational workflows for enterprise wealth management and retirement clients — including <span class="inline-client">UBS</span>, <span class="inline-client">Raymond James</span>, and <span class="inline-client">Empower</span> — across data reconciliation, due diligence reporting, and platform onboarding.</p>
+        <p>My focus is on converting manual operational bottlenecks into automated, scalable pipelines: I have built delta-validation workflows that catch fund and fee discrepancies before client delivery, automated 6 reporting pipelines using Python and AWS Lambda that eliminated 80% of manual effort, and designed Tableau alert layers on Salesforce data that cut issue investigation time from hours to minutes — making our team faster and more reliable in operationally supporting these clients.</p>
+      </div>
+    </div>
+    <div class="about-photo-wrap reveal" style="transition-delay:0.15s;">
+      <div class="about-photo">
+        <div class="about-photo-placeholder">
+          <div class="about-photo-initials">ND</div>
+          <div class="about-photo-name">NIRAJ DEVALE</div>
+          <div class="about-photo-hint">← Replace with your photo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skills-strip reveal">
+    <div class="skills-strip-label">Skills</div>
+    <div class="skills-strip-row">
+      <span class="skill-chip">User Story Writing</span>
+      <span class="skill-chip">Feature Enhancement Planning</span>
+      <span class="skill-chip">Market Research</span>
+      <span class="skill-chip">UAT</span>
+      <span class="skill-chip">Agile / Scrum</span>
+      <span class="skill-chip">Jira / Confluence</span>
+      <span class="skill-chip">Kanban</span>
+      <span class="skill-chip blue">SQL</span>
+      <span class="skill-chip blue">Python</span>
+      <span class="skill-chip blue">AWS Lambda</span>
+      <span class="skill-chip blue">AWS QuickSight</span>
+      <span class="skill-chip blue">Tableau</span>
+      <span class="skill-chip blue">Salesforce</span>
+      <span class="skill-chip blue">ETL Pipelines</span>
+      <span class="skill-chip blue">Data Reconciliation</span>
+      <span class="skill-chip purple">Claude</span>
+      <span class="skill-chip purple">ChatGPT</span>
+      <span class="skill-chip purple">Copilot Agents</span>
+      <span class="skill-chip purple">Quick Suite AI</span>
+      <span class="skill-chip purple">AI-powered Querying</span>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div style="text-align:center;margin-bottom:3rem;">
+    <div class="section-label">Work History</div>
+    <h2 class="section-title">Experience</h2>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-card reveal">
+      <div class="exp-badge">⭐ Star of the Quarter – Q1 2025</div>
+      <div class="exp-role">Product Operations Analyst</div>
+      <div class="exp-company">Morningstar Inc. · Mumbai</div>
+      <div class="exp-meta">Dec 2024 – Present</div>
+      <ul class="exp-list">
+        <li>Coordinated across compliance, engineering, and advisory teams to define operational workflows and onboard 7 new clients, ensuring successful go-live execution.</li>
+        <li>Authored requirements and 15+ user stories for feature enhancements and reporting tools; executed UAT across multiple prod release cycles, catching edge cases before client-facing deployment.</li>
+        <li>Automated 6 client reporting workflows using Python, AWS Lambda, and SendGrid — eliminating 80% of manual effort across 5 scheduled reporting pipelines.</li>
+        <li>Built and maintained 25+ AWS QuickSight dashboards for compliance tracking and portfolio monitoring, reducing ad-hoc data requests by ~80% for advisor and ops teams.</li>
+        <li>Integrated AI-powered querying tools into dashboard workflows, cutting fund-level issue investigation time from hours to minutes for analysts.</li>
+        <li>Developed Tableau reporting on Salesforce data with automated delta-validation alerts, enabling detection of fund data discrepancies across 40 clients.</li>
+      </ul>
+    </div>
+    <div class="exp-card reveal" style="transition-delay:0.1s;">
+      <div class="exp-role">Associate Research Analyst</div>
+      <div class="exp-company">IndustryARC · Hyderabad</div>
+      <div class="exp-meta">Oct 2023 – Nov 2024</div>
+      <ul class="exp-list">
+        <li>Delivered 100+ market research reports across 30+ industries using TAM/SAM/SOM estimation, DCF modeling, competitive benchmarking, and financial forecasting — consistent sub-5-day turnaround.</li>
+        <li>Analyzed 1,500+ companies via Bloomberg, PitchBook, and Crunchbase to deliver valuation analysis and sector trend insights used by investment and strategy clients.</li>
+        <li>Built Python ETL pipelines for data ingestion and trend extraction across industries, reducing research turnaround time by 40%.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORM THINKING -->
+<section id="platform">
+  <div class="platform-wrap">
+    <div class="section-label">Philosophy</div>
+    <h2 class="section-title">Platform Thinking</h2>
+    <div class="section-divider"></div>
+    <div class="platform-inner reveal">
+      <h3 class="platform-headline">Governing the Machine: <em>Human Logic</em> as the Foundation, AI as the Accelerator.</h3>
+      <p class="platform-body">My approach to any automation or AI integration starts with the same question: do we actually understand the workflow well enough to automate it? Before writing a single line of code or enabling a single AI tool, I map the operational process end-to-end — identifying where data breaks, where rules are ambiguous, and where human judgment is genuinely required. I then encode those business rules precisely: validation thresholds, exception definitions, reconciliation logic, compliance triggers. Only once that foundation is solid do I bring in automation and AI to execute at scale. The result is a system that runs reliably because it is built on logic I understand and can defend, not a black box that nobody owns.</p>
+      <p class="platform-body">In practice, this approach has directly improved how we operationally support enterprise clients at Morningstar. For clients like <span class="client-name">UBS</span>, <span class="client-name">Raymond James</span>, <span class="client-name">Empower</span>, <span class="client-name">JP Morgan</span>, and <span class="client-name">Lincoln Financial</span>, I designed the core reconciliation and compliance exception logic first — defining which fund-level fields to validate, which fee structure deltas to flag, and what thresholds trigger a compliance alert — before automating those checks using Python, AWS Lambda, and Tableau delta-validation. AI-powered querying tools were then layered on top to help analysts surface issues in real time without manual investigation. The operational benefit is ours: our team responds faster, catches discrepancies before they reach the client, and spends less time on manual triage — which means we deliver a more reliable and scalable service to the clients we support.</p>
+      <div class="platform-layers">
+        <div class="layer-card">
+          <div class="layer-label human">Human Layer — What I Own</div>
+          <div class="layer-items">
+            <div class="layer-item">Define business rules, validation thresholds, and reconciliation logic</div>
+            <div class="layer-item">Author user stories, acceptance criteria, and UAT scripts</div>
+            <div class="layer-item">Map operational workflows and identify failure points</div>
+            <div class="layer-item">Own client communication and exception resolution decisions</div>
+            <div class="layer-item">Ensure regulatory and compliance logic is correctly encoded</div>
+          </div>
+        </div>
+        <div class="layer-card">
+          <div class="layer-label ai">AI Layer — What AI Executes</div>
+          <div class="layer-items">
+            <div class="layer-item ai-item">Run anomaly detection across large fund and portfolio datasets</div>
+            <div class="layer-item ai-item">Surface exceptions against human-defined rules in real time</div>
+            <div class="layer-item ai-item">Assist in summarizing compliance issues and generating draft alerts</div>
+            <div class="layer-item ai-item">Power dashboard query interfaces for analyst self-service</div>
+            <div class="layer-item ai-item">Accelerate report generation and issue triage at scale</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section id="casestudy">
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <div class="section-label">Conceptual Framework</div>
+    <h2 class="section-title">Case Study</h2>
+  </div>
+  <div class="cs-banner reveal">
+    <div class="cs-banner-header">
+      <div class="cs-label">Product Framework · Conceptual</div>
+      <h3 class="cs-title">Next-Gen Retirement Services Fiduciary Platform</h3>
+      <p class="cs-desc">An end-to-end PM execution framework covering market study, product architecture, PRD, and technical specifications for a multi-tenant fiduciary platform serving recordkeepers, advisors, and participants.</p>
+    </div>
+    <div class="cs-index">
+      <span class="cs-index-chip">Market Opportunity Analysis</span>
+      <span class="cs-index-chip">TAM / SAM / SOM Sizing</span>
+      <span class="cs-index-chip">Problem Statement</span>
+      <span class="cs-index-chip">User Personas</span>
+      <span class="cs-index-chip">User Stories</span>
+      <span class="cs-index-chip">Product Requirements Document (PRD)</span>
+      <span class="cs-index-chip">User Flow Diagrams</span>
+      <span class="cs-index-chip">System Architecture</span>
+      <span class="cs-index-chip">Feature Prioritization Roadmap</span>
+      <span class="cs-index-chip">ERISA Compliance Framework</span>
+      <span class="cs-index-chip">SECURE 2.0 Integration</span>
+      <span class="cs-index-chip">Technical Specifications</span>
+      <span class="cs-index-chip">API Design</span>
+      <span class="cs-index-chip">Risk Register</span>
+      <span class="cs-index-chip">Core KPIs</span>
+      <span class="cs-index-chip">MVP Release Notes</span>
+    </div>
+    <div class="cs-cta-bar">
+      <span class="cs-cta-note">Conceptual PM execution framework · Not a live product.</span>
+      <a href="casestudy.html" class="cs-link">Read Full Case Study →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Contact</h2>
+    <div class="section-divider"></div>
+    <p style="color:#CBD5E1;font-size:1rem;line-height:1.75;">Open to global hybrid opportunities and relocation-ready. If you're building a team around product-led operations or data-driven execution — let's talk.</p>
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <div class="contact-card-label">📍 Location</div>
+        <div class="contact-card-val">Navi Mumbai, India (Pin: 410206)</div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-label">📞 Contact</div>
+        <div class="contact-card-val"><a href="tel:+919820231444">+91 9820231444</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-label">✉️ Email</div>
+        <div class="contact-card-val"><a href="mailto:nirajdevale210@gmail.com">nirajdevale210@gmail.com</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-label">💼 LinkedIn</div>
+        <div class="contact-card-val"><a href="https://linkedin.com/in/niraj-devale-5b4760191" target="_blank" rel="noopener">linkedin.com/in/niraj-devale-5b4760191</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">Niraj<span>.</span> Devale</div>
+  <div class="footer-note">Product Operations Analyst · Financial Services</div>
+  <div class="footer-note">Navi Mumbai · Open to Global Hybrid Roles</div>
+</footer>
+
+<script>
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    document.querySelectorAll('section[id]').forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+    navLinks.forEach(l => { l.style.color = l.getAttribute('href') === '#' + current ? 'var(--accent)' : ''; });
+  });
+</script>
+</body>
+</html>
