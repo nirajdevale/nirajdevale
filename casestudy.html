@@ -261,12 +261,11 @@
       <li><a href="#prd" class="toc-link"><span class="toc-num">05</span><span class="toc-text">PRD</span></a></li>
       <li><a href="#flows" class="toc-link"><span class="toc-num">06</span><span class="toc-text">User Flow Diagrams</span></a></li>
       <li><a href="#architecture" class="toc-link"><span class="toc-num">07</span><span class="toc-text">System Architecture</span></a></li>
-      <li><a href="#regulatory" class="toc-link"><span class="toc-num">08</span><span class="toc-text">Regulatory Layer</span></a></li>
-      <li><a href="#techspecs" class="toc-link"><span class="toc-num">09</span><span class="toc-text">Technical Specifications</span></a></li>
-      <li><a href="#roadmap" class="toc-link"><span class="toc-num">10</span><span class="toc-text">Roadmap</span></a></li>
-      <li><a href="#kpis" class="toc-link"><span class="toc-num">11</span><span class="toc-text">KPIs</span></a></li>
-      <li><a href="#risks" class="toc-link"><span class="toc-num">12</span><span class="toc-text">Risk Register</span></a></li>
-      <li><a href="#mvp" class="toc-link"><span class="toc-num">13</span><span class="toc-text">MVP Release Notes</span></a></li>
+      <li><a href="#techspecs" class="toc-link"><span class="toc-num">08</span><span class="toc-text">Technical Specifications</span></a></li>
+      <li><a href="#roadmap" class="toc-link"><span class="toc-num">09</span><span class="toc-text">Roadmap</span></a></li>
+      <li><a href="#kpis" class="toc-link"><span class="toc-num">10</span><span class="toc-text">KPIs</span></a></li>
+      <li><a href="#risks" class="toc-link"><span class="toc-num">11</span><span class="toc-text">Risk Register</span></a></li>
+      <li><a href="#mvp" class="toc-link"><span class="toc-num">12</span><span class="toc-text">MVP Release Notes</span></a></li>
     </ul>
   </div>
 </aside>
@@ -289,10 +288,10 @@
     <div class="cs-hero">
       <div class="eyebrow">Conceptual Product Framework · Full Case Study</div>
       <h1 class="cs-hero-title">Next-Gen Retirement Services Fiduciary Platform</h1>
-      <p class="cs-hero-desc">An end-to-end product execution framework covering market study, PRD, user flows, architecture, regulatory integration, technical specifications, and MVP launch planning for a multi-tenant fiduciary platform serving recordkeepers, advisors, and participants.</p>
+      <p class="cs-hero-desc">An end-to-end product execution framework covering market study, PRD, user flows, architecture, regulatory integration, technical specifications, and MVP launch planning for a multi-tenant fiduciary platform serving recordkeepers, advisors and fiduciaries. </p>
       <div class="meta-row">
         <span class="meta-pill">Domain: Retirement / FinTech</span>
-        <span class="meta-pill">Tenants: Recordkeepers · Advisors · Participants</span>
+        <span class="meta-pill">Tenants: Recordkeepers · Advisors . Fiduciary</span>
         <span class="meta-pill">Regulatory: ERISA · SECURE 2.0</span>
         <span class="meta-pill">Type: Conceptual PM Execution</span>
       </div>
@@ -304,31 +303,29 @@
     <div class="cs-section" id="market">
       <div class="sec-label">01</div>
       <h2 class="sec-title">Market Opportunity</h2>
-      <p class="prose">The US retirement market is one of the largest long-duration capital pools in the world. Defined contribution (DC) plan assets continue to grow steadily, and SECURE 2.0 provisions are expanding participation. Yet the platform infrastructure serving this market — recordkeeping systems, advisor portals, participant apps — remains largely fragmented, manual-heavy, and built on aging technology. The opportunity for a modern, AI-augmented, multi-tenant fiduciary platform is real and structurally underserved.</p>
+      <p class="prose">The US retirement fiduciary ecosystem is fragmented across recordkeepers, advisors, TPAs, and custodians. Daily plan, participant, and fund files require reconciliation before advisors and participants can rely on the data. Rising SECURE 2.0 requirements, increasing assets under management, and aging legacy systems create strong demand for an AI-assisted fiduciary operating platform.</p>
       <div class="data-grid">
         <div class="data-cell">
-          <div class="data-num">$12T+</div>
-          <div class="data-desc">Total US DC plan assets under management (estimated 2024)</div>
+          <div class="data-num">$350B</div>
+          <div class="data-desc">Fiduciary Services Market</div>
         </div>
         <div class="data-cell">
-          <div class="data-num">~7% CAGR</div>
-          <div class="data-desc">Projected US retirement services market growth through 2030</div>
+          <div class="data-num">Mid-Market</div>
+          <div class="data-desc">SAM: Recordkeepers and RIAs underserved by both enterprise platforms and point solutions</div>
         </div>
         <div class="data-cell">
-          <div class="data-num">70M+</div>
-          <div class="data-desc">Active 401(k) participants, most on fragmented legacy platforms</div>
+          <div class="data-num">5.5%</div>
+          <div class="data-desc">SOM target through SaaS platform sales and white-label partnerships</div>
         </div>
       </div>
-      <h4>TAM / SAM / SOM</h4>
-      <p class="prose"><strong>TAM:</strong> Full US retirement administration software and services spend — estimated $8–10B annually across recordkeeping, compliance tooling, advisor portals, and participant engagement platforms.<br/><strong>SAM:</strong> Mid-market recordkeepers and RIA firms managing $100M–$10B AUM — the segment most underserved by both legacy enterprise platforms and narrow point solutions. Estimated $2–3B addressable spend.<br/><strong>SOM:</strong> 3–5% capture of SAM within 5 years via targeted platform sales, advisor channel partnerships, and recordkeeper white-label agreements — representing $60–150M in ARR potential.</p>
-      <h4>Structural Industry Challenges</h4>
+      <h4>Industry Challenges</h4>
       <div class="chip-row">
-        <span class="chip">High manual reconciliation burden</span>
-        <span class="chip">Fragmented advisor tooling</span>
-        <span class="chip">Poor participant UX & engagement</span>
-        <span class="chip">SECURE 2.0 compliance complexity</span>
-        <span class="chip">No consolidated cross-plan data layer</span>
-        <span class="chip">Legacy custodian feed integration gaps</span>
+        <span class="chip">Manual reconciliation</span>
+        <span class="chip">Legacy integrations</span>
+        <span class="chip">Compliance complexity</span>
+        <span class="chip">Disconnected advisor tooling</span>
+        <span class="chip">Poor participant engagement</span>
+        <span class="chip">Limited audit readiness</span>
       </div>
     </div>
 
@@ -336,9 +333,9 @@
     <div class="cs-section" id="problem">
       <div class="sec-label">02</div>
       <h2 class="sec-title">Problem Statement</h2>
-      <p class="prose">The US retirement services ecosystem has three user groups — recordkeeper operations teams, financial advisors, and plan participants — who are all served by the same fragmented data environment and disjointed tooling. The result: operational errors that surface during audits rather than before delivery, advisors wasting hours in context-switching, and participants making uninformed financial decisions. SECURE 2.0 adds further compliance complexity that existing systems handle inconsistently or manually.</p>
+      <p class="prose">Every recordkeeper provides different file formats and business rules. Fiduciaries spend significant effort validating schema, reconciling plans, funds, and participants, investigating exceptions, and preparing audits. Compliance is reactive rather than embedded into operational workflows — creating risk, rework, and SLA exposure across the ecosystem.</p>
       <div class="card">
-        <div class="card-body"><strong>Core Problem:</strong> There is no unified, intelligent platform that connects plan data, compliance logic, advisor workflows, and participant guidance in one real-time operational layer — governed by rules that are transparent, auditable, and regulatory-aware.</div>
+        <div class="card-body"><strong>Core Problem:</strong> No unified operating platform exists that combines reconciliation, compliance automation, advisor intelligence, and participant visibility in a single real-time workflow — governed by transparent, auditable business rules.</div>
       </div>
     </div>
 
@@ -350,22 +347,22 @@
         <div class="card">
           <div class="card-role">Recordkeeper Ops Analyst</div>
           <div class="card-title">Alex, Operations — Mid-market Recordkeeper</div>
-          <div class="card-body">Spends 60%+ of time on manual reconciliation of plan documents, fee structures, and participant census. Errors surface during audits. Needs: automated validation, clear exception queues, audit trail.</div>
+          <div class="card-body">Spends most of the day reconciling plan documents, fund mappings, participant census files, and fee schedules. Operational issues are usually discovered during audits instead of before client delivery, creating rework and SLA risk. Needs: automated validation, prioritized exception queues, and complete audit visibility.</div>
         </div>
         <div class="card">
           <div class="card-role">Financial Advisor / RIA</div>
           <div class="card-title">Priya, Senior Advisor — $800M AUM Practice</div>
-          <div class="card-body">Manages 40+ plans across 4–6 portals. No consolidated view of participant health, compliance flags, or fund performance. Needs: unified dashboard, intelligent alerts, self-service data access.</div>
+          <div class="card-body">Manages retirement plans across multiple clients using disconnected advisor portals. Lacks a consolidated view of participant health, compliance status, and investment performance. Needs: a unified dashboard with actionable insights and intelligent alerts.</div>
         </div>
         <div class="card">
-          <div class="card-role">Plan Participant</div>
-          <div class="card-title">Marcus, Mid-career Employee — Age 42</div>
-          <div class="card-body">Low engagement with retirement planning due to poor UX and no personalized guidance. Contribution rate suboptimal, investment mix not reviewed in 3 years. Needs: projection tools, nudges, simple action paths.</div>
+          <div class="card-role">Fiduciary Manager</div>
+          <div class="card-title">Sarah, Senior Fiduciary Manager — Age 46</div>
+          <div class="card-body">Oversees multiple retirement plans, ensuring regulatory compliance and coordinating with recordkeepers and advisors. Reviews plan health, investigates compliance exceptions, and monitors fund and operational changes across clients. Needs: centralized platform with real-time compliance visibility, AI-assisted investigation, and complete audit traceability.</div>
         </div>
         <div class="card">
           <div class="card-role">Compliance Officer</div>
-          <div class="card-title">Sandra, Chief Compliance — Regional Recordkeeper</div>
-          <div class="card-body">Manages ERISA testing, 5500 filing prep, and SECURE 2.0 exception handling manually. Audit trails inconsistent across plan years. Needs: automated testing, structured exception logs, filing-ready reports.</div>
+          <div class="card-title">Sandra, Chief Compliance Officer — Regional Recordkeeper</div>
+          <div class="card-body">Oversees ERISA testing, SECURE 2.0 compliance, annual 5500 preparation, and audit readiness across hundreds of retirement plans. Manual compliance reviews consume significant operational effort. Needs: automated testing, structured exception logs, and audit-ready reporting.</div>
         </div>
       </div>
     </div>
@@ -377,23 +374,23 @@
       <div class="two-col">
         <div class="card" style="border-left:3px solid var(--accent);">
           <div class="card-role">Recordkeeper Ops Analyst</div>
-          <div class="card-quote">"As an operations analyst, I want automated delta-validation alerts against plan documents so that I can catch fee and investment discrepancies before they reach the client delivery stage."</div>
-          <div class="card-body" style="margin-top:0.75rem;font-size:0.82rem;"><strong>Acceptance Criteria:</strong> System flags any delta &gt;$0.01 in fee structures or &gt;0.1% in NAV per fund; alert routed to ops queue within 5 minutes of feed ingestion; all flags logged with source, timestamp, and resolver.</div>
+          <div class="card-quote">"As a Recordkeeper Operations Analyst, I want the platform to automatically validate and reconcile plan, fund, and operational data so that discrepancies are identified before data reaches advisors or downstream systems."</div>
+          <div class="card-body" style="margin-top:0.75rem;font-size:0.82rem;"><strong>Acceptance Criteria:</strong> System automatically validates incoming data, creates exceptions for failed records, generates reconciliation reports, and routes issues to the Operations Console with complete audit traceability.</div>
         </div>
         <div class="card" style="border-left:3px solid var(--accent-blue);">
-          <div class="card-role">Financial Advisor / RIA</div>
-          <div class="card-quote">"As an advisor managing 40+ plans, I want a unified dashboard aggregating participant deferral rates, fund performance, and compliance alerts so I can focus on client conversations, not data collection."</div>
-          <div class="card-body" style="margin-top:0.75rem;font-size:0.82rem;"><strong>Acceptance Criteria:</strong> Dashboard loads within 2s for up to 50 plans; deferral, performance, and compliance data from same underlying data layer; AI query interface available for natural language questions.</div>
+          <div class="card-role">Financial Advisor</div>
+          <div class="card-quote">"As a Financial Advisor, I want a single platform where I can view assigned retirement plans, fund lineups, compliance status, and operational insights so that I can support my clients without switching between multiple systems."</div>
+          <div class="card-body" style="margin-top:0.75rem;font-size:0.82rem;"><strong>Acceptance Criteria:</strong> Advisors can securely access assigned plans, monitor compliance and operational status, review proposals, and submit plan requests through a centralized dashboard.</div>
         </div>
         <div class="card" style="border-left:3px solid var(--accent-purple);">
-          <div class="card-role">Plan Participant</div>
-          <div class="card-quote">"As a participant nearing retirement, I want an AI-guided projection tool showing how my deferral rate and fund mix impact my retirement income so I can course-correct before it's too late."</div>
-          <div class="card-body" style="margin-top:0.75rem;font-size:0.82rem;"><strong>Acceptance Criteria:</strong> Projection tool runs in real-time on slider input; outputs monthly retirement income estimate with confidence band; displays gap vs retirement income goal; suggests 2–3 action steps.</div>
+          <div class="card-role">Fiduciary Manager</div>
+          <div class="card-quote">"As a Fiduciary Manager, I want real-time visibility into plan compliance, validation results, operational exceptions, and audit history so that I can make informed governance decisions across all managed retirement plans."</div>
+          <div class="card-body" style="margin-top:0.75rem;font-size:0.82rem;"><strong>Acceptance Criteria:</strong> Fiduciaries can review plan health, monitor compliance status, track exceptions, and access complete audit records through the Advisor Dashboard.</div>
         </div>
         <div class="card" style="border-left:3px solid #FBBF24;">
           <div class="card-role">Compliance Officer</div>
-          <div class="card-quote">"As a compliance officer, I want automated ERISA testing workflows with structured exception logs and audit trail so that regulatory filings are audit-ready at any point in the plan year."</div>
-          <div class="card-body" style="margin-top:0.75rem;font-size:0.82rem;"><strong>Acceptance Criteria:</strong> ADP/ACP test runs automatically on each payroll cycle; exceptions categorized by type, severity, and required action; full audit log exportable as PDF or CSV for 5500 filing support.</div>
+          <div class="card-quote">"As a Compliance Officer, I want automated compliance validation, structured exception reporting, and immutable audit trails so that retirement plans remain compliant with ERISA and SECURE 2.0 requirements throughout their lifecycle."</div>
+          <div class="card-body" style="margin-top:0.75rem;font-size:0.82rem;"><strong>Acceptance Criteria:</strong> Compliance validations execute automatically, exceptions are categorized by severity, and every compliance action is recorded in immutable audit logs for regulatory reporting.</div>
         </div>
       </div>
     </div>
@@ -404,57 +401,61 @@
       <h2 class="sec-title">Product Requirements Document (PRD)</h2>
 
       <h4>Product Vision</h4>
-      <p class="prose">Build the first fiduciary-grade, AI-augmented multi-tenant platform that unifies plan data, compliance automation, advisor intelligence, and participant guidance into a single real-time operational layer — governed by transparent, auditable business rules.</p>
+      <p class="prose">Build the industry's first fiduciary-grade, AI-augmented retirement operations platform that unifies plan data ingestion, reconciliation, compliance automation, advisor intelligence, and participant engagement into a single secure, real-time ecosystem — empowering fiduciaries, recordkeepers, advisors, and participants with a shared source of truth to reduce operational risk, accelerate regulatory compliance, and improve retirement outcomes.</p>
 
       <h4>Goals & Success Metrics</h4>
       <table>
         <thead><tr><th>Goal</th><th>Metric</th><th>Target</th></tr></thead>
         <tbody>
-          <tr><td>Reduce ops manual review burden</td><td>Analyst time on manual reconciliation tasks</td><td>−50% vs baseline within 6 months</td></tr>
-          <tr><td>Increase advisor platform adoption</td><td>DAU as % of licensed advisor seats</td><td>&gt;60% by Month 3</td></tr>
-          <tr><td>Improve participant engagement</td><td>Projection tool unique sessions / enrolled participants</td><td>&gt;30% within 90 days of launch</td></tr>
-          <tr><td>Drive compliance accuracy</td><td>Data reconciliation error rate</td><td>&lt;0.5% per plan per cycle</td></tr>
-          <tr><td>Accelerate client onboarding</td><td>Days from contract to go-live</td><td>&lt;30 days</td></tr>
+          <tr><td>Reduce operational manual effort</td><td>Analyst validation &amp; reconciliation time</td><td>50% reduction within 6 months</td></tr>
+          <tr><td>Improve advisor productivity</td><td>Advisor Dashboard monthly active usage</td><td>&gt;70% of licensed advisors by Month 3</td></tr>
+          <tr><td>Improve validation accuracy</td><td>First-pass validation success rate</td><td>&gt;99% per processing cycle</td></tr>
+          <tr><td>Strengthen compliance quality</td><td>Compliance exception rate</td><td>&lt;0.5% per validation cycle</td></tr>
+          <tr><td>Accelerate plan onboarding</td><td>Plan creation to production readiness</td><td>&lt;2 business days</td></tr>
         </tbody>
       </table>
 
       <h4>Scope — In</h4>
       <div class="chip-row">
-        <span class="chip">Multi-tenant plan data management</span>
-        <span class="chip">Real-time compliance alert engine</span>
-        <span class="chip">Advisor unified dashboard</span>
-        <span class="chip">Participant projection tool</span>
-        <span class="chip">ERISA automated testing (ADP/ACP/Top-Heavy)</span>
-        <span class="chip">SECURE 2.0 workflow automation</span>
-        <span class="chip">Audit trail & exception log</span>
-        <span class="chip">Custodian feed integration</span>
-        <span class="chip">AI-powered querying</span>
-        <span class="chip">Role-based access control (RBAC)</span>
+        <span class="chip">Plan Onboarding &amp; Configuration</span>
+        <span class="chip">Fund &amp; Plan Data Validation</span>
+        <span class="chip">Automated Reconciliation Engine</span>
+        <span class="chip">ERISA &amp; SECURE 2.0 Compliance Rules Engine</span>
+        <span class="chip">Advisor Dashboard</span>
+        <span class="chip">Operations Console</span>
+        <span class="chip">Exception Management Workflow</span>
+        <span class="chip">Audit Trail &amp; Regulatory Reporting</span>
+        <span class="chip">Fund Data Integrations</span>
+        <span class="chip">AI Query Engine</span>
+        <span class="chip">AI Investigation Assistant</span>
+        <span class="chip">Role-Based Access Control (RBAC)</span>
       </div>
 
       <h4>Scope — Out (Phase 1)</h4>
       <div class="chip-row">
+        <span class="chip amber">Participant Self-Service Portal</span>
         <span class="chip amber">AI Participant Chatbot</span>
-        <span class="chip amber">White-label advisor portal</span>
-        <span class="chip amber">Third-party API marketplace</span>
-        <span class="chip amber">ESG fund screening module</span>
-        <span class="chip amber">Cross-plan analytics suite</span>
+        <span class="chip amber">Payroll Management</span>
+        <span class="chip amber">White-label Platform</span>
+        <span class="chip amber">Open API Marketplace</span>
+        <span class="chip amber">Cross-Plan Benchmarking</span>
+        <span class="chip amber">Predictive Compliance Analytics</span>
       </div>
 
       <h4>Functional Requirements</h4>
       <table>
         <thead><tr><th>ID</th><th>Requirement</th><th>Priority</th></tr></thead>
         <tbody>
-          <tr><td>FR-01</td><td>System ingests custodian data feeds (DTCC/NSCC) and validates against plan document schema within 10 minutes of receipt</td><td><span class="badge badge-must">Must Have</span></td></tr>
-          <tr><td>FR-02</td><td>Compliance alert engine fires within 5 minutes of a delta threshold breach, routing to the correct ops queue by tenant and plan</td><td><span class="badge badge-must">Must Have</span></td></tr>
-          <tr><td>FR-03</td><td>Advisor dashboard aggregates plan-level data (deferral, performance, compliance status) across all assigned plans in a single view</td><td><span class="badge badge-must">Must Have</span></td></tr>
-          <tr><td>FR-04</td><td>Participant projection tool calculates retirement income estimate in real-time based on deferral rate, fund mix, and age inputs</td><td><span class="badge badge-must">Must Have</span></td></tr>
-          <tr><td>FR-05</td><td>ADP/ACP and Top-Heavy ERISA tests run automatically on each payroll cycle; exceptions logged with required action and resolution path</td><td><span class="badge badge-must">Must Have</span></td></tr>
-          <tr><td>FR-06</td><td>SECURE 2.0 auto-enrollment engine manages escalation schedules, LTPT employee eligibility tracking, and ESA sidecar creation</td><td><span class="badge badge-must">Must Have</span></td></tr>
-          <tr><td>FR-07</td><td>Full audit trail: every compliance action, exception, and data change is logged with user ID, timestamp, and delta details</td><td><span class="badge badge-must">Must Have</span></td></tr>
-          <tr><td>FR-08</td><td>AI query interface allows advisors and ops analysts to ask natural-language questions against plan data without writing SQL</td><td><span class="badge badge-should">Should Have</span></td></tr>
-          <tr><td>FR-09</td><td>Ops console provides manual override capability for any automated compliance action, with mandatory reason code and approval workflow</td><td><span class="badge badge-should">Should Have</span></td></tr>
-          <tr><td>FR-10</td><td>5500 filing data auto-aggregated and pre-filled from plan year records, exportable as structured report</td><td><span class="badge badge-could">Could Have</span></td></tr>
+          <tr><td>FR-01</td><td>System ingests fund and plan data from configured external providers and validates incoming records against predefined business and schema rules within 1 hour of receipt</td><td><span class="badge badge-must">Must Have</span></td></tr>
+          <tr><td>FR-02</td><td>Validation engine automatically detects discrepancies across fund data, plan configurations, compliance rules, and operational records, routing exceptions to the Operations Console for investigation</td><td><span class="badge badge-must">Must Have</span></td></tr>
+          <tr><td>FR-03</td><td>Advisor Dashboard provides a unified view of plan status, fund information, compliance health, and validation results across all assigned plans</td><td><span class="badge badge-must">Must Have</span></td></tr>
+          <tr><td>FR-04</td><td>Plan onboarding workflow supports creation, configuration, validation, and activation of retirement plans with configurable business rules and approval workflows</td><td><span class="badge badge-must">Must Have</span></td></tr>
+          <tr><td>FR-05</td><td>Compliance Rules Engine automatically executes ERISA and SECURE 2.0 validations during operational processing and generates structured exception reports for failed validations</td><td><span class="badge badge-must">Must Have</span></td></tr>
+          <tr><td>FR-06</td><td>Reconciliation Engine compares incoming operational data with internal records, identifies mismatches, and maintains reconciliation status for every processing cycle</td><td><span class="badge badge-must">Must Have</span></td></tr>
+          <tr><td>FR-07</td><td>Every validation, reconciliation, compliance action, exception, and manual override is recorded with immutable audit logs containing plan ID, timestamp, affected records, and complete change history</td><td><span class="badge badge-must">Must Have</span></td></tr>
+          <tr><td>FR-08</td><td>AI-powered natural language query enables advisors and operations analysts to retrieve plan, fund, compliance, and operational information without requiring SQL or technical knowledge</td><td><span class="badge badge-should">Should Have</span></td></tr>
+          <tr><td>FR-09</td><td>Operations Console supports manual overrides through configurable approval workflows with mandatory reason codes, reviewer assignment, and full audit traceability</td><td><span class="badge badge-should">Should Have</span></td></tr>
+          <tr><td>FR-10</td><td>Reporting service automatically generates operational, compliance, reconciliation, and audit reports in exportable formats (PDF/CSV) for regulatory and business reporting</td><td><span class="badge badge-could">Could Have</span></td></tr>
         </tbody>
       </table>
 
@@ -462,27 +463,27 @@
       <div class="nfr-grid">
         <div class="nfr-card">
           <div class="nfr-title">Performance</div>
-          <div class="nfr-val">Dashboard load &lt;2s for 50 plans. Feed ingestion to alert &lt;10 min. API p99 response &lt;500ms.</div>
+          <div class="nfr-val">Advisor Dashboard loads within 3s for up to 100 active plans. Validation, reconciliation, and compliance processing complete within 10 min. API P99 &lt;500ms.</div>
         </div>
         <div class="nfr-card">
           <div class="nfr-title">Availability</div>
-          <div class="nfr-val">99.9% uptime SLA. Planned maintenance windows during off-market hours only. Failover RTO &lt;15 min.</div>
+          <div class="nfr-val">99.9% uptime excluding scheduled maintenance. Automated service recovery with disaster recovery RTO &lt;15 minutes.</div>
         </div>
         <div class="nfr-card">
           <div class="nfr-title">Security</div>
-          <div class="nfr-val">SOC 2 Type II, PII data encryption at rest (AES-256) and in transit (TLS 1.3). MFA required for all admin roles.</div>
+          <div class="nfr-val">AES-256 at rest, TLS 1.3 in transit, OAuth2/SAML enterprise auth, MFA, RBAC, and immutable audit logging for all operational activities.</div>
         </div>
         <div class="nfr-card">
           <div class="nfr-title">Scalability</div>
-          <div class="nfr-val">Platform must support 500+ concurrent plans and 100K+ participants per tenant without degradation.</div>
+          <div class="nfr-val">Supports 1,000+ retirement plans with concurrent validation, reconciliation, and horizontally scalable event-driven processing without performance degradation.</div>
         </div>
         <div class="nfr-card">
-          <div class="nfr-title">Auditability</div>
-          <div class="nfr-val">All data changes and compliance actions logged immutably. Audit export available as PDF/CSV within 30 seconds.</div>
+          <div class="nfr-title">Auditability &amp; Compliance</div>
+          <div class="nfr-val">All actions recorded in immutable audit logs with 7-year ERISA retention. Configurable SECURE 2.0 rules. Audit reports exportable on demand.</div>
         </div>
         <div class="nfr-card">
-          <div class="nfr-title">Compliance</div>
-          <div class="nfr-val">ERISA, SECURE 2.0, FINRA record-keeping requirements. Data residency in US only. GDPR-ready access controls.</div>
+          <div class="nfr-title">Data Residency</div>
+          <div class="nfr-val">All data stored within US regions only. PII tokenization at ingestion. SOC 2 Type II controls enforced across all environments.</div>
         </div>
       </div>
     </div>
@@ -491,130 +492,122 @@
     <div class="cs-section" id="flows">
       <div class="sec-label">06</div>
       <h2 class="sec-title">User Flow Diagrams</h2>
-      <p class="prose">Two core flows govern the most critical operational moments on the platform: how the system detects and routes a compliance exception, and how a new participant is onboarded and activated.</p>
+      <p class="prose">Two core flows define the platform's critical operational paths: how fund and plan data is ingested, validated, and routed through the reconciliation engine; and how a product journey progresses from plan setup through compliance validation to advisor delivery.</p>
 
-      <!-- FLOW 1: COMPLIANCE EXCEPTION -->
+      <!-- FLOW 1: DATA INGESTION & VALIDATION -->
       <div class="flow-wrap">
-        <div class="flow-title">Flow 1 — Compliance Exception Handling</div>
-        <svg viewBox="0 0 720 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;display:block;margin:0 auto;" font-family="'JetBrains Mono', monospace">
+        <div class="flow-title">Flow 1 — Data Ingestion, Validation & Exception Routing</div>
+        <svg viewBox="0 0 720 560" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;display:block;margin:0 auto;" font-family="'JetBrains Mono', monospace">
           <defs>
-            <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-              <polygon points="0 0, 8 3, 0 6" fill="#2D3F5A"/>
-            </marker>
-            <marker id="arr-g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-              <polygon points="0 0, 8 3, 0 6" fill="#10B981"/>
-            </marker>
-            <marker id="arr-r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-              <polygon points="0 0, 8 3, 0 6" fill="#F87171"/>
-            </marker>
+            <marker id="a1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#2D3F5A"/></marker>
+            <marker id="a1g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#10B981"/></marker>
+            <marker id="a1r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#F87171"/></marker>
+            <marker id="a1p" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#A78BFA"/></marker>
           </defs>
-          <!-- STEP 1: FEED INGESTION -->
-          <rect x="270" y="20" width="180" height="46" rx="8" fill="#1E293B" stroke="#2D3F5A" stroke-width="1.5"/>
-          <text x="360" y="39" text-anchor="middle" fill="#94A3B8" font-size="9" letter-spacing="1">TRIGGER</text>
-          <text x="360" y="55" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Custodian Feed Ingested</text>
-          <!-- arrow down -->
-          <line x1="360" y1="66" x2="360" y2="100" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#arr)"/>
-          <!-- STEP 2: VALIDATION -->
-          <rect x="260" y="100" width="200" height="46" rx="8" fill="#162032" stroke="#2D3F5A" stroke-width="1.5"/>
-          <text x="360" y="119" text-anchor="middle" fill="#38BDF8" font-size="9" letter-spacing="1">SYSTEM</text>
-          <text x="360" y="135" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Delta Validation Engine Runs</text>
-          <!-- arrow down -->
-          <line x1="360" y1="146" x2="360" y2="180" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#arr)"/>
-          <!-- DIAMOND: BREACH? -->
-          <polygon points="360,180 430,210 360,240 290,210" fill="#162032" stroke="#2D3F5A" stroke-width="1.5"/>
-          <text x="360" y="207" text-anchor="middle" fill="#94A3B8" font-size="9">Threshold</text>
-          <text x="360" y="220" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Breached?</text>
-          <!-- NO path (right) -->
-          <line x1="430" y1="210" x2="560" y2="210" stroke="#10B981" stroke-width="1.5" marker-end="url(#arr-g)"/>
-          <text x="492" y="204" text-anchor="middle" fill="#10B981" font-size="9">No</text>
-          <rect x="560" y="190" width="130" height="40" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
-          <text x="625" y="207" text-anchor="middle" fill="#A7F3D0" font-size="9">Log Clean Record</text>
-          <text x="625" y="220" text-anchor="middle" fill="#94A3B8" font-size="8">No action required</text>
-          <!-- YES path (down) -->
-          <line x1="360" y1="240" x2="360" y2="274" stroke="#F87171" stroke-width="1.5" marker-end="url(#arr-r)"/>
-          <text x="373" y="260" fill="#F87171" font-size="9">Yes</text>
-          <!-- STEP 3: EXCEPTION CREATED -->
-          <rect x="245" y="274" width="230" height="46" rx="8" fill="#1E293B" stroke="#F87171" stroke-width="1"/>
-          <text x="360" y="293" text-anchor="middle" fill="#FCA5A5" font-size="9" letter-spacing="1">SYSTEM</text>
-          <text x="360" y="309" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Exception Record Created</text>
-          <!-- arrow down -->
-          <line x1="360" y1="320" x2="360" y2="354" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#arr)"/>
-          <!-- STEP 4: ROUTED -->
-          <rect x="245" y="354" width="230" height="46" rx="8" fill="#162032" stroke="#2D3F5A" stroke-width="1.5"/>
-          <text x="360" y="373" text-anchor="middle" fill="#38BDF8" font-size="9" letter-spacing="1">SYSTEM</text>
-          <text x="360" y="389" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Routed to Ops Queue by Tenant</text>
-          <!-- arrow down -->
-          <line x1="360" y1="400" x2="360" y2="434" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#arr)"/>
-          <!-- STEP 5: ANALYST REVIEWS -->
-          <rect x="245" y="434" width="230" height="46" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
-          <text x="360" y="453" text-anchor="middle" fill="#A7F3D0" font-size="9" letter-spacing="1">HUMAN</text>
-          <text x="360" y="469" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Ops Analyst Reviews & Resolves</text>
-          <!-- left side: AI assist -->
-          <rect x="30" y="434" width="160" height="46" rx="8" fill="#162032" stroke="#A78BFA" stroke-width="1"/>
-          <text x="110" y="453" text-anchor="middle" fill="#DDD6FE" font-size="9" letter-spacing="1">AI ASSIST</text>
-          <text x="110" y="469" text-anchor="middle" fill="#F8FAFC" font-size="10">AI Summary Generated</text>
-          <line x1="245" y1="457" x2="190" y2="457" stroke="#A78BFA" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+          <!-- Step 1: External Provider -->
+          <rect x="260" y="16" width="200" height="44" rx="8" fill="#1E293B" stroke="#2D3F5A" stroke-width="1.5"/>
+          <text x="360" y="34" text-anchor="middle" fill="#94A3B8" font-size="8" letter-spacing="1">TRIGGER</text>
+          <text x="360" y="50" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">External Provider Sends Data File</text>
+          <line x1="360" y1="60" x2="360" y2="92" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a1)"/>
+          <!-- Step 2: Ingestion -->
+          <rect x="250" y="92" width="220" height="44" rx="8" fill="#162032" stroke="#38BDF8" stroke-width="1"/>
+          <text x="360" y="110" text-anchor="middle" fill="#38BDF8" font-size="8" letter-spacing="1">SYSTEM</text>
+          <text x="360" y="126" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Ingest &amp; Parse Data File</text>
+          <line x1="360" y1="136" x2="360" y2="168" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a1)"/>
+          <!-- Step 3: Schema Validation -->
+          <rect x="250" y="168" width="220" height="44" rx="8" fill="#162032" stroke="#38BDF8" stroke-width="1"/>
+          <text x="360" y="186" text-anchor="middle" fill="#38BDF8" font-size="8" letter-spacing="1">SYSTEM</text>
+          <text x="360" y="202" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Schema &amp; Business Rule Validation</text>
+          <line x1="360" y1="212" x2="360" y2="246" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a1)"/>
+          <!-- Diamond: Valid? -->
+          <polygon points="360,246 430,274 360,302 290,274" fill="#162032" stroke="#2D3F5A" stroke-width="1.5"/>
+          <text x="360" y="271" text-anchor="middle" fill="#94A3B8" font-size="8">Records</text>
+          <text x="360" y="284" text-anchor="middle" fill="#F8FAFC" font-size="8" font-weight="600">Valid?</text>
+          <!-- YES path right -->
+          <line x1="430" y1="274" x2="540" y2="274" stroke="#10B981" stroke-width="1.5" marker-end="url(#a1g)"/>
+          <text x="483" y="267" text-anchor="middle" fill="#10B981" font-size="8">Yes</text>
+          <rect x="540" y="254" width="150" height="40" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+          <text x="615" y="271" text-anchor="middle" fill="#A7F3D0" font-size="9">Pass to Reconciliation</text>
+          <text x="615" y="284" text-anchor="middle" fill="#94A3B8" font-size="8">Engine</text>
+          <!-- NO path down -->
+          <line x1="360" y1="302" x2="360" y2="334" stroke="#F87171" stroke-width="1.5" marker-end="url(#a1r)"/>
+          <text x="374" y="322" fill="#F87171" font-size="8">No</text>
+          <!-- Exception -->
+          <rect x="250" y="334" width="220" height="44" rx="8" fill="#1E293B" stroke="#F87171" stroke-width="1"/>
+          <text x="360" y="352" text-anchor="middle" fill="#FCA5A5" font-size="8" letter-spacing="1">SYSTEM</text>
+          <text x="360" y="368" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Create Exception Record</text>
+          <line x1="360" y1="378" x2="360" y2="410" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a1)"/>
+          <!-- Ops Console -->
+          <rect x="250" y="410" width="220" height="44" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+          <text x="360" y="428" text-anchor="middle" fill="#A7F3D0" font-size="8" letter-spacing="1">HUMAN</text>
+          <text x="360" y="444" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Ops Console — Analyst Reviews</text>
+          <!-- AI assist left -->
+          <rect x="40" y="410" width="160" height="44" rx="8" fill="#162032" stroke="#A78BFA" stroke-width="1"/>
+          <text x="120" y="428" text-anchor="middle" fill="#DDD6FE" font-size="8" letter-spacing="1">AI ASSIST</text>
+          <text x="120" y="444" text-anchor="middle" fill="#F8FAFC" font-size="9">OPS GPT Summarizes Issue</text>
+          <line x1="250" y1="432" x2="200" y2="432" stroke="#A78BFA" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#a1p)"/>
+          <line x1="360" y1="454" x2="360" y2="486" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a1)"/>
+          <!-- Resolved -->
+          <rect x="250" y="486" width="220" height="44" rx="8" fill="#162032" stroke="#10B981" stroke-width="1"/>
+          <text x="360" y="504" text-anchor="middle" fill="#A7F3D0" font-size="8" letter-spacing="1">OUTCOME</text>
+          <text x="360" y="520" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Exception Resolved &amp; Audit Logged</text>
         </svg>
       </div>
 
-      <!-- FLOW 2: PARTICIPANT ONBOARDING -->
+      <!-- FLOW 2: PRODUCT JOURNEY -->
       <div class="flow-wrap">
-        <div class="flow-title">Flow 2 — Participant Onboarding & Activation</div>
-        <svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;display:block;margin:0 auto;" font-family="'JetBrains Mono', monospace">
+        <div class="flow-title">Flow 2 — Product Journey: Plan Setup to Advisor Delivery</div>
+        <svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;display:block;margin:0 auto;" font-family="'JetBrains Mono', monospace">
           <defs>
-            <marker id="arr2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-              <polygon points="0 0, 8 3, 0 6" fill="#2D3F5A"/>
-            </marker>
-            <marker id="arr2-g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-              <polygon points="0 0, 8 3, 0 6" fill="#10B981"/>
-            </marker>
+            <marker id="a2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#2D3F5A"/></marker>
+            <marker id="a2g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#10B981"/></marker>
+            <marker id="a2r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#F87171"/></marker>
           </defs>
-          <!-- Steps left to right in 5 columns -->
-          <!-- Step 1 -->
-          <rect x="20" y="90" width="120" height="60" rx="8" fill="#1E293B" stroke="#2D3F5A" stroke-width="1.5"/>
-          <text x="80" y="113" text-anchor="middle" fill="#94A3B8" font-size="8" letter-spacing="1">TRIGGER</text>
-          <text x="80" y="128" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Employer Sends</text>
-          <text x="80" y="141" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Census File</text>
-          <line x1="140" y1="120" x2="158" y2="120" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#arr2)"/>
-          <!-- Step 2 -->
-          <rect x="158" y="90" width="130" height="60" rx="8" fill="#162032" stroke="#2D3F5A" stroke-width="1.5"/>
-          <text x="223" y="113" text-anchor="middle" fill="#38BDF8" font-size="8" letter-spacing="1">SYSTEM</text>
-          <text x="223" y="128" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Validate &amp; Match</text>
-          <text x="223" y="141" text-anchor="middle" fill="#94A3B8" font-size="8">Against plan schema</text>
-          <line x1="288" y1="120" x2="306" y2="120" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#arr2)"/>
-          <!-- Step 3: eligibility check -->
-          <polygon points="371,90 421,120 371,150 321,120" fill="#162032" stroke="#2D3F5A" stroke-width="1.5"/>
-          <text x="371" y="117" text-anchor="middle" fill="#94A3B8" font-size="8">Eligibility</text>
-          <text x="371" y="130" text-anchor="middle" fill="#F8FAFC" font-size="8" font-weight="600">Verified?</text>
-          <!-- YES -->
-          <line x1="421" y1="120" x2="459" y2="120" stroke="#10B981" stroke-width="1.5" marker-end="url(#arr2-g)"/>
-          <text x="440" y="113" text-anchor="middle" fill="#10B981" font-size="8">Yes</text>
-          <!-- NO (down) -->
-          <line x1="371" y1="150" x2="371" y2="190" stroke="#F87171" stroke-width="1.5" marker-end="url(#arr2)"/>
-          <text x="385" y="173" fill="#F87171" font-size="8">No</text>
-          <rect x="306" y="190" width="130" height="40" rx="6" fill="#1E293B" stroke="#F87171" stroke-width="1"/>
-          <text x="371" y="207" text-anchor="middle" fill="#FCA5A5" font-size="9">Flag for HR Review</text>
-          <text x="371" y="220" text-anchor="middle" fill="#94A3B8" font-size="8">Pause enrollment</text>
-          <!-- Step 4 -->
-          <rect x="459" y="90" width="120" height="60" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
-          <text x="519" y="113" text-anchor="middle" fill="#A7F3D0" font-size="8" letter-spacing="1">SYSTEM</text>
-          <text x="519" y="128" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Enroll in Plan</text>
-          <text x="519" y="141" text-anchor="middle" fill="#94A3B8" font-size="8">Apply auto-enroll rate</text>
-          <line x1="579" y1="120" x2="597" y2="120" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#arr2)"/>
-          <!-- Step 5 -->
-          <rect x="597" y="90" width="103" height="60" rx="8" fill="#162032" stroke="#A78BFA" stroke-width="1"/>
-          <text x="648" y="113" text-anchor="middle" fill="#DDD6FE" font-size="8" letter-spacing="1">AI</text>
-          <text x="648" y="128" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Projection &amp; Nudge</text>
-          <text x="648" y="141" text-anchor="middle" fill="#94A3B8" font-size="8">Welcome comms sent</text>
-          <!-- LEGEND -->
-          <rect x="20" y="290" width="12" height="12" rx="2" fill="#1E293B" stroke="#2D3F5A"/>
-          <text x="38" y="302" fill="#94A3B8" font-size="9">System Event</text>
-          <rect x="130" y="290" width="12" height="12" rx="2" fill="#1E293B" stroke="#10B981"/>
-          <text x="148" y="302" fill="#94A3B8" font-size="9">Human / Approved Step</text>
-          <rect x="300" y="290" width="12" height="12" rx="2" fill="#162032" stroke="#A78BFA"/>
-          <text x="318" y="302" fill="#94A3B8" font-size="9">AI-Assisted</text>
-          <rect x="420" y="290" width="12" height="12" rx="2" fill="#1E293B" stroke="#F87171"/>
-          <text x="438" y="302" fill="#94A3B8" font-size="9">Exception Path</text>
+          <!-- Step labels row -->
+          <!-- Box 1: Plan Setup -->
+          <rect x="10" y="60" width="120" height="64" rx="8" fill="#1E293B" stroke="#2D3F5A" stroke-width="1.5"/>
+          <text x="70" y="80" text-anchor="middle" fill="#94A3B8" font-size="7" letter-spacing="1">ADMIN</text>
+          <text x="70" y="96" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Plan Setup &amp;</text>
+          <text x="70" y="110" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Configuration</text>
+          <line x1="130" y1="92" x2="148" y2="92" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a2)"/>
+          <!-- Box 2: Data Ingestion -->
+          <rect x="148" y="60" width="120" height="64" rx="8" fill="#162032" stroke="#38BDF8" stroke-width="1"/>
+          <text x="208" y="80" text-anchor="middle" fill="#38BDF8" font-size="7" letter-spacing="1">SYSTEM</text>
+          <text x="208" y="96" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Fund &amp; Plan</text>
+          <text x="208" y="110" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Data Ingestion</text>
+          <line x1="268" y1="92" x2="286" y2="92" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a2)"/>
+          <!-- Box 3: Validation -->
+          <rect x="286" y="60" width="120" height="64" rx="8" fill="#162032" stroke="#38BDF8" stroke-width="1"/>
+          <text x="346" y="80" text-anchor="middle" fill="#38BDF8" font-size="7" letter-spacing="1">SYSTEM</text>
+          <text x="346" y="96" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Validation &amp;</text>
+          <text x="346" y="110" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Reconciliation</text>
+          <!-- exception branch down -->
+          <line x1="346" y1="124" x2="346" y2="172" stroke="#F87171" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#a2r)"/>
+          <rect x="276" y="172" width="140" height="36" rx="6" fill="#1E293B" stroke="#F87171" stroke-width="1"/>
+          <text x="346" y="188" text-anchor="middle" fill="#FCA5A5" font-size="8">Exception → Ops Console</text>
+          <text x="346" y="200" text-anchor="middle" fill="#94A3B8" font-size="7">Analyst resolves</text>
+          <!-- pass right -->
+          <line x1="406" y1="92" x2="424" y2="92" stroke="#10B981" stroke-width="1.5" marker-end="url(#a2g)"/>
+          <!-- Box 4: Compliance -->
+          <rect x="424" y="60" width="120" height="64" rx="8" fill="#162032" stroke="#A78BFA" stroke-width="1"/>
+          <text x="484" y="80" text-anchor="middle" fill="#DDD6FE" font-size="7" letter-spacing="1">COMPLIANCE</text>
+          <text x="484" y="96" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">ERISA &amp; SECURE</text>
+          <text x="484" y="110" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">2.0 Rules Engine</text>
+          <line x1="544" y1="92" x2="562" y2="92" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a2)"/>
+          <!-- Box 5: Advisor -->
+          <rect x="562" y="60" width="120" height="64" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+          <text x="622" y="80" text-anchor="middle" fill="#A7F3D0" font-size="7" letter-spacing="1">OUTCOME</text>
+          <text x="622" y="96" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Advisor Dashboard</text>
+          <text x="622" y="110" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Live &amp; Audit Logged</text>
+          <!-- Legend -->
+          <rect x="10" y="265" width="10" height="10" rx="2" fill="#162032" stroke="#38BDF8"/>
+          <text x="26" y="275" fill="#94A3B8" font-size="8">System Processing</text>
+          <rect x="160" y="265" width="10" height="10" rx="2" fill="#1E293B" stroke="#10B981"/>
+          <text x="176" y="275" fill="#94A3B8" font-size="8">Human / Outcome</text>
+          <rect x="300" y="265" width="10" height="10" rx="2" fill="#162032" stroke="#A78BFA"/>
+          <text x="316" y="275" fill="#94A3B8" font-size="8">Compliance Engine</text>
+          <rect x="450" y="265" width="10" height="10" rx="2" fill="#1E293B" stroke="#F87171"/>
+          <text x="466" y="275" fill="#94A3B8" font-size="8">Exception Path</text>
         </svg>
       </div>
     </div>
@@ -623,79 +616,62 @@
     <div class="cs-section" id="architecture">
       <div class="sec-label">07</div>
       <h2 class="sec-title">System Architecture</h2>
-      <p class="prose">The platform uses an event-driven, multi-tenant architecture with strict tenant data isolation, a real-time event streaming layer for operational alerting, and an AI inference layer above the core data models. All three user surfaces — recordkeeper ops console, advisor dashboard, and participant app — are served from the same underlying data fabric with role-appropriate access control.</p>
+      <p class="prose">The platform is built on a microservices-based, event-driven architecture deployed on AWS. It uses an API Gateway layer, an event streaming backbone for operational workflows, a compliance rules engine, an AI services layer for intelligent querying and investigation, and a secure multi-tenant data layer — all connected through a central event bus that drives real-time processing across validation, reconciliation, compliance, and audit workflows.</p>
       <div class="card">
         <div style="display:flex;flex-direction:column;gap:0.75rem;font-family:var(--mono);font-size:0.78rem;">
           <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
             <span style="color:var(--accent);width:100px;flex-shrink:0;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;">Presentation</span>
-            <div class="chip-row" style="margin:0;"><span class="chip">Advisor Dashboard (React)</span><span class="chip">Participant Web App</span><span class="chip">Ops Console</span><span class="chip">Admin Portal</span></div>
+            <div class="chip-row" style="margin:0;"><span class="chip">Advisor Dashboard (React)</span><span class="chip">Operations Console (React)</span><span class="chip">Admin Portal</span></div>
           </div>
           <div style="border-left:2px dashed var(--border);height:16px;margin-left:107px;"></div>
           <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
-            <span style="color:#A78BFA;width:100px;flex-shrink:0;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;">AI Layer</span>
-            <div class="chip-row" style="margin:0;"><span class="chip purple">AI Query Engine</span><span class="chip purple">Anomaly Detection</span><span class="chip purple">Projection Model</span><span class="chip purple">Compliance Exception Handler</span></div>
+            <span style="color:#A78BFA;width:100px;flex-shrink:0;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;">AI Services</span>
+            <div class="chip-row" style="margin:0;"><span class="chip purple">OPS GPT (NL Query Engine)</span><span class="chip purple">AI Investigation Assistant</span><span class="chip purple">Anomaly Detection</span><span class="chip purple">Compliance Exception Summarizer</span></div>
           </div>
           <div style="border-left:2px dashed var(--border);height:16px;margin-left:107px;"></div>
           <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
             <span style="color:var(--accent-blue);width:100px;flex-shrink:0;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;">API Gateway</span>
-            <div class="chip-row" style="margin:0;"><span class="chip blue">REST API (FastAPI)</span><span class="chip blue">WebSocket Events</span><span class="chip blue">OAuth2 / SAML Auth</span><span class="chip blue">Rate Limiting</span></div>
+            <div class="chip-row" style="margin:0;"><span class="chip blue">REST API (FastAPI)</span><span class="chip blue">OAuth2 / SAML Auth</span><span class="chip blue">RBAC Enforcement</span><span class="chip blue">Rate Limiting</span></div>
           </div>
           <div style="border-left:2px dashed var(--border);height:16px;margin-left:107px;"></div>
           <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
             <span style="color:#FBBF24;width:100px;flex-shrink:0;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;">Event Bus</span>
-            <div class="chip-row" style="margin:0;"><span class="chip amber">Kafka / SNS Topics</span><span class="chip amber">Plan Event Stream</span><span class="chip amber">Compliance Trigger Queue</span><span class="chip amber">Notification Service</span></div>
+            <div class="chip-row" style="margin:0;"><span class="chip amber">Kafka / AWS SQS</span><span class="chip amber">Validation Event Stream</span><span class="chip amber">Reconciliation Queue</span><span class="chip amber">Compliance Trigger Queue</span><span class="chip amber">Audit Event Stream</span></div>
           </div>
           <div style="border-left:2px dashed var(--border);height:16px;margin-left:107px;"></div>
           <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
             <span style="color:var(--text-muted);width:100px;flex-shrink:0;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;">Data Layer</span>
-            <div class="chip-row" style="margin:0;"><span class="chip">PostgreSQL (Plan Data)</span><span class="chip">S3 (Documents)</span><span class="chip">Redshift (Analytics)</span><span class="chip">ElasticSearch (Audit Logs)</span></div>
+            <div class="chip-row" style="margin:0;"><span class="chip">PostgreSQL (Plan &amp; Operational Data)</span><span class="chip">S3 (Documents &amp; Files)</span><span class="chip">Redshift (Analytics)</span><span class="chip">OpenSearch (Audit Logs)</span></div>
           </div>
           <div style="border-left:2px dashed var(--border);height:16px;margin-left:107px;"></div>
           <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
             <span style="color:var(--text-muted);width:100px;flex-shrink:0;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;">Integrations</span>
-            <div class="chip-row" style="margin:0;"><span class="chip">Custodian Feeds (DTCC/NSCC)</span><span class="chip">Fund Pricing APIs</span><span class="chip">Payroll Connectors</span><span class="chip">Salesforce CRM</span></div>
+            <div class="chip-row" style="margin:0;"><span class="chip">Fund Data Providers</span><span class="chip">Custodian Feeds</span><span class="chip">Recordkeeper Systems</span><span class="chip">Salesforce CRM</span></div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 08 REGULATORY -->
-    <div class="cs-section" id="regulatory">
-      <div class="sec-label">08</div>
-      <h2 class="sec-title">Regulatory Layer: ERISA & SECURE 2.0</h2>
-      <p class="prose">Regulatory compliance is embedded into the core data workflows — not bolted on as a reporting feature. The platform encodes ERISA testing logic and SECURE 2.0 provisions directly into the event-driven architecture, with AI used to surface exceptions and generate audit-ready documentation automatically.</p>
-      <div class="two-col">
-        <div class="card">
-          <div class="nfr-title">ERISA Framework</div>
-          <div class="chip-row"><span class="chip blue">ADP/ACP Non-Discrimination Testing</span><span class="chip blue">Top-Heavy Detection</span><span class="chip blue">Fidelity Bond Tracking</span><span class="chip blue">Plan Doc Version Control</span><span class="chip blue">5500 Filing Pre-fill</span><span class="chip blue">Fiduciary Action Logging</span></div>
-        </div>
-        <div class="card">
-          <div class="nfr-title">SECURE 2.0 Provisions</div>
-          <div class="chip-row"><span class="chip purple">Auto-Enrollment Engine (3–10%)</span><span class="chip purple">ESA Sidecar Tracking</span><span class="chip purple">LTPT Employee Eligibility</span><span class="chip purple">Student Loan Match Recon</span><span class="chip purple">Catch-up Limit Enforcement (60–63)</span><span class="chip purple">Roth Matching Config</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 09 TECH SPECS -->
+    <!-- 08 TECH SPECS -->
     <div class="cs-section" id="techspecs">
-      <div class="sec-label">09</div>
+      <div class="sec-label">08</div>
       <h2 class="sec-title">Technical Specifications</h2>
 
       <h4>Technology Stack</h4>
       <table>
         <thead><tr><th>Layer</th><th>Technology</th><th>Rationale</th></tr></thead>
         <tbody>
-          <tr><td>Frontend</td><td>React 18, TypeScript, TailwindCSS</td><td>Component reuse across advisor/ops/participant surfaces; strong ecosystem for financial UI patterns</td></tr>
-          <tr><td>Backend API</td><td>Python / FastAPI</td><td>Async-native, high throughput; familiar to financial data teams; strong OpenAPI/Swagger support</td></tr>
-          <tr><td>Event Streaming</td><td>Apache Kafka (MSK)</td><td>Durable, ordered event log for compliance actions; supports replay for audit trail reconstruction</td></tr>
-          <tr><td>Primary Database</td><td>PostgreSQL (RDS)</td><td>ACID compliance critical for financial data; row-level security for multi-tenancy</td></tr>
-          <tr><td>Document Storage</td><td>AWS S3 + Glacier</td><td>Cost-efficient long-term storage for plan documents, statements; lifecycle policies for 7-year ERISA retention</td></tr>
-          <tr><td>Analytics / BI</td><td>AWS Redshift + QuickSight</td><td>Columnar performance for plan-level aggregations; native AWS integration; familiar from existing Morningstar stack</td></tr>
-          <tr><td>Search / Audit Log</td><td>ElasticSearch (OpenSearch)</td><td>Full-text search across audit events; sub-second query on millions of compliance records</td></tr>
-          <tr><td>AI Inference</td><td>AWS Bedrock / Claude API</td><td>Managed inference for anomaly summarization and natural language query layer; no model hosting ops overhead</td></tr>
-          <tr><td>Auth</td><td>OAuth 2.0 + SAML 2.0 (Okta)</td><td>Enterprise SSO compatibility for recordkeeper and RIA clients; MFA enforced at platform level</td></tr>
-          <tr><td>Infrastructure</td><td>AWS (ECS Fargate, VPC, CloudWatch)</td><td>Fully managed container execution; isolated VPCs per tenant for data boundary enforcement</td></tr>
-          <tr><td>CI/CD</td><td>GitHub Actions + Harness</td><td>Automated test gates before any production deployment; feature flags for phased rollout</td></tr>
+          <tr><td>Frontend</td><td>React 18, TypeScript, TailwindCSS</td><td>Component reuse across advisor and ops surfaces; strong ecosystem for data-heavy financial UI patterns</td></tr>
+          <tr><td>Backend API</td><td>Python / FastAPI</td><td>Async-native, high throughput; strong OpenAPI/Swagger support for internal and partner API documentation</td></tr>
+          <tr><td>Event Streaming</td><td>Apache Kafka / AWS SQS</td><td>Durable, ordered event log for validation and compliance workflows; supports replay for audit trail reconstruction</td></tr>
+          <tr><td>Primary Database</td><td>PostgreSQL (RDS)</td><td>ACID compliance critical for financial data; row-level security enforces multi-tenant data isolation</td></tr>
+          <tr><td>Document &amp; File Storage</td><td>AWS S3 + Glacier</td><td>Scalable storage for plan documents and data files; lifecycle policies enforce 7-year ERISA retention</td></tr>
+          <tr><td>Analytics</td><td>AWS Redshift + QuickSight</td><td>Columnar performance for operational aggregations; enables self-service reporting for ops and advisor teams</td></tr>
+          <tr><td>Audit Log Search</td><td>OpenSearch (Elasticsearch)</td><td>Full-text search across audit events; sub-second query performance across millions of operational records</td></tr>
+          <tr><td>AI Services</td><td>AWS Bedrock / Claude API</td><td>Managed inference for OPS GPT, investigation assistance, and anomaly summarization; no model hosting overhead</td></tr>
+          <tr><td>Auth</td><td>OAuth 2.0 + SAML 2.0 (Okta)</td><td>Enterprise SSO compatibility for recordkeeper and advisor clients; MFA enforced at platform level</td></tr>
+          <tr><td>Infrastructure</td><td>AWS ECS Fargate, VPC, CloudWatch</td><td>Fully managed container execution; isolated VPCs enforce tenant data boundaries across all environments</td></tr>
+          <tr><td>CI/CD</td><td>GitHub Actions + Harness</td><td>Automated test gates before production deployments; feature flags for phased and controlled rollout</td></tr>
         </tbody>
       </table>
 
@@ -706,28 +682,13 @@
       <table>
         <thead><tr><th>Method</th><th>Endpoint</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td><span style="color:#A7F3D0;font-family:var(--mono);">GET</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/plans/{plan_id}/compliance-status</span></td><td>Returns current compliance test results, exception count, and AI-generated summary for a given plan</td></tr>
-          <tr><td><span style="color:#A7F3D0;font-family:var(--mono);">GET</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/plans/{plan_id}/exceptions</span></td><td>Lists all open exceptions for a plan, paginated and filterable by type, severity, and status</td></tr>
-          <tr><td><span style="color:#BAE6FD;font-family:var(--mono);">POST</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/exceptions/{id}/resolve</span></td><td>Marks an exception resolved; requires reason_code and resolver_id; writes to audit log</td></tr>
-          <tr><td><span style="color:#A7F3D0;font-family:var(--mono);">GET</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/participants/{id}/projection</span></td><td>Returns retirement income projection for a participant based on current deferral rate and fund mix</td></tr>
-          <tr><td><span style="color:#BAE6FD;font-family:var(--mono);">POST</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/plans/{plan_id}/feeds/ingest</span></td><td>Triggers manual ingestion of a custodian feed file for a specific plan; returns job_id for status polling</td></tr>
-          <tr><td><span style="color:#A7F3D0;font-family:var(--mono);">GET</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/plans/{plan_id}/audit-log</span></td><td>Returns immutable audit trail for a plan; exportable as PDF or CSV via accept header</td></tr>
-          <tr><td><span style="color:#BAE6FD;font-family:var(--mono);">POST</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/query</span></td><td>Natural language query against plan data via AI layer; returns structured result set with source attribution</td></tr>
-        </tbody>
-      </table>
-
-      <h4>Plan Data Schema (Core Fields)</h4>
-      <table>
-        <thead><tr><th>Field</th><th>Type</th><th>Constraints</th></tr></thead>
-        <tbody>
-          <tr><td><span style="font-family:var(--mono);font-size:0.8rem;">plan_id</span></td><td>string</td><td>UUID, unique per tenant, immutable after creation</td></tr>
-          <tr><td><span style="font-family:var(--mono);font-size:0.8rem;">tenant_id</span></td><td>string</td><td>Scoped to recordkeeper; enforced at row level in PostgreSQL</td></tr>
-          <tr><td><span style="font-family:var(--mono);font-size:0.8rem;">plan_type</span></td><td>enum</td><td>401k | 403b | SIMPLE_IRA | SEP_IRA</td></tr>
-          <tr><td><span style="font-family:var(--mono);font-size:0.8rem;">auto_enroll_rate</span></td><td>decimal</td><td>Range 0.00–0.10; required if auto_enroll_enabled = true</td></tr>
-          <tr><td><span style="font-family:var(--mono);font-size:0.8rem;">fee_structure</span></td><td>JSON object</td><td>Versioned; delta tracked on every update; change triggers validation event</td></tr>
-          <tr><td><span style="font-family:var(--mono);font-size:0.8rem;">compliance_status</span></td><td>enum</td><td>CLEAN | WARN | EXCEPTION | UNDER_REVIEW</td></tr>
-          <tr><td><span style="font-family:var(--mono);font-size:0.8rem;">last_validated_at</span></td><td>timestamp</td><td>UTC; updated on every feed ingestion and validation run</td></tr>
-          <tr><td><span style="font-family:var(--mono);font-size:0.8rem;">erisa_test_results</span></td><td>JSON array</td><td>One entry per test type per payroll cycle; retained for 7 years</td></tr>
+          <tr><td><span style="color:#A7F3D0;font-family:var(--mono);">GET</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/plans/{plan_id}</span></td><td>Returns plan details, configuration, compliance status, and current validation state</td></tr>
+          <tr><td><span style="color:#BAE6FD;font-family:var(--mono);">POST</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/plans</span></td><td>Creates a new retirement plan; triggers configuration validation and onboarding workflow</td></tr>
+          <tr><td><span style="color:#A7F3D0;font-family:var(--mono);">GET</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/plans/{plan_id}/exceptions</span></td><td>Lists all open exceptions for a plan, filterable by type, severity, and resolution status</td></tr>
+          <tr><td><span style="color:#BAE6FD;font-family:var(--mono);">POST</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/exceptions/{id}/resolve</span></td><td>Marks exception resolved; requires reason_code and resolver_id; writes immutable audit record</td></tr>
+          <tr><td><span style="color:#A7F3D0;font-family:var(--mono);">GET</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/plans/{plan_id}/audit-log</span></td><td>Returns immutable audit trail for a plan; exportable as PDF or CSV via Accept header</td></tr>
+          <tr><td><span style="color:#BAE6FD;font-family:var(--mono);">POST</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/ai/query</span></td><td>Natural language query via OPS GPT against plan, fund, and operational data; returns structured result with attribution</td></tr>
+          <tr><td><span style="color:#A7F3D0;font-family:var(--mono);">GET</span></td><td><span style="font-family:var(--mono);font-size:0.8rem;">/api/v1/funds/{fund_id}/validation-status</span></td><td>Returns latest validation result, reconciliation status, and exception count for a fund</td></tr>
         </tbody>
       </table>
 
@@ -736,109 +697,110 @@
         <span class="chip blue">AES-256 encryption at rest</span>
         <span class="chip blue">TLS 1.3 in transit</span>
         <span class="chip blue">Row-level security (PostgreSQL)</span>
-        <span class="chip blue">MFA for all admin/compliance roles</span>
+        <span class="chip blue">MFA for all admin and compliance roles</span>
         <span class="chip blue">VPC isolation per tenant</span>
         <span class="chip blue">SOC 2 Type II controls</span>
         <span class="chip blue">PII tokenization at ingestion</span>
         <span class="chip blue">Secrets Manager (no hardcoded credentials)</span>
+        <span class="chip blue">Immutable audit logs (7-year ERISA retention)</span>
       </div>
     </div>
 
-    <!-- 10 ROADMAP -->
+    <!-- 09 ROADMAP -->
     <div class="cs-section" id="roadmap">
-      <div class="sec-label">10</div>
+      <div class="sec-label">09</div>
       <h2 class="sec-title">Feature Prioritization Roadmap</h2>
       <div class="roadmap">
         <div class="roadmap-row">
           <div class="roadmap-phase"><span class="rphase-label">Phase 1</span><span class="rphase-time">Months 1–4</span></div>
-          <div class="roadmap-items"><span class="ri">Compliance Alert Engine</span><span class="ri">Advisor Dashboard</span><span class="ri">Participant Projection Tool</span><span class="ri">ERISA Testing (ADP/ACP)</span><span class="ri">Plan Doc Management</span><span class="ri">Audit Log</span><span class="ri">Custodian Feed Integration</span><span class="ri">RBAC</span></div>
+          <div class="roadmap-items"><span class="ri">Plan Onboarding &amp; Configuration</span><span class="ri">Fund &amp; Plan Data Ingestion</span><span class="ri">Validation &amp; Reconciliation Engine</span><span class="ri">Compliance Rules Engine (ERISA &amp; SECURE 2.0)</span><span class="ri">Exception Management Workflow</span><span class="ri">Operations Console</span><span class="ri">Advisor Dashboard</span><span class="ri">Audit Trail &amp; Reporting</span><span class="ri">RBAC &amp; Multi-Tenant Security</span></div>
         </div>
         <div class="roadmap-row">
           <div class="roadmap-phase"><span class="rphase-label">Phase 2</span><span class="rphase-time">Months 5–9</span></div>
-          <div class="roadmap-items"><span class="ri">AI Query Interface</span><span class="ri">SECURE 2.0 Auto-Enroll Engine</span><span class="ri">LTPT Eligibility Tracking</span><span class="ri">Student Loan Match Recon</span><span class="ri">5500 Filing Pre-fill</span><span class="ri">Participant Nudge Engine</span></div>
+          <div class="roadmap-items"><span class="ri">OPS GPT (AI Query Engine)</span><span class="ri">AI Investigation Assistant</span><span class="ri">Expanded Fund Data Integrations</span><span class="ri">Advanced Reconciliation Analytics</span><span class="ri">Regulatory Reporting Automation</span><span class="ri">Advisor Proposal Workflow</span></div>
         </div>
         <div class="roadmap-row">
           <div class="roadmap-phase"><span class="rphase-label">Phase 3</span><span class="rphase-time">Months 10–15</span></div>
-          <div class="roadmap-items"><span class="ri">White-Label Advisor Portal</span><span class="ri">AI Participant Chatbot</span><span class="ri">Cross-Plan Analytics Suite</span><span class="ri">Third-Party API Marketplace</span><span class="ri">ESG Fund Screening</span></div>
+          <div class="roadmap-items"><span class="ri">Participant Self-Service Portal</span><span class="ri">White-Label Platform</span><span class="ri">Open API Marketplace</span><span class="ri">Cross-Plan Benchmarking</span><span class="ri">Predictive Compliance Analytics</span></div>
         </div>
       </div>
     </div>
 
-    <!-- 11 KPIs -->
+    <!-- 10 KPIs -->
     <div class="cs-section" id="kpis">
-      <div class="sec-label">11</div>
+      <div class="sec-label">10</div>
       <h2 class="sec-title">Core KPIs</h2>
       <table>
         <thead><tr><th>KPI</th><th>Target (Post-MVP)</th><th>Measurement</th></tr></thead>
         <tbody>
-          <tr><td>Compliance Exception Resolution Time</td><td>&lt;4 hours average</td><td>Exception created → resolved timestamp delta</td></tr>
-          <tr><td>Advisor Dashboard DAU</td><td>&gt;60% of licensed seats</td><td>Login events per active license</td></tr>
-          <tr><td>Participant Projection Tool Engagement</td><td>&gt;30% of enrolled participants</td><td>Unique tool sessions / total participants</td></tr>
-          <tr><td>Data Reconciliation Accuracy</td><td>&gt;99.5% per cycle</td><td>Validated records vs source custodian feed</td></tr>
-          <tr><td>Ops Analyst Manual Review Time</td><td>−50% vs baseline</td><td>Time-on-task survey + ticket volume</td></tr>
-          <tr><td>Client Onboarding (Contract to Go-Live)</td><td>&lt;30 days</td><td>Contract signed → first participant login</td></tr>
-          <tr><td>Feed Ingestion to Alert Latency</td><td>&lt;10 minutes</td><td>Feed receipt timestamp → alert fired timestamp</td></tr>
-          <tr><td>ERISA Test Auto-Run Rate</td><td>100% of payroll cycles</td><td>Auto-triggered tests / total payroll events</td></tr>
+          <tr><td>Validation First-Pass Success Rate</td><td>&gt;99% per processing cycle</td><td>Records passing validation / total records processed per cycle</td></tr>
+          <tr><td>Exception Resolution Time</td><td>&lt;4 hours average</td><td>Exception created timestamp → resolved timestamp</td></tr>
+          <tr><td>Advisor Dashboard Monthly Active Usage</td><td>&gt;70% of licensed advisors</td><td>Unique advisor logins per month / total licensed advisors</td></tr>
+          <tr><td>Reconciliation Accuracy</td><td>&gt;99.5% per processing cycle</td><td>Successfully reconciled records / total records per cycle</td></tr>
+          <tr><td>Ops Analyst Manual Effort Reduction</td><td>50% reduction vs baseline</td><td>Analyst hours on manual validation tasks vs pre-platform baseline</td></tr>
+          <tr><td>Plan Onboarding Time</td><td>&lt;2 business days</td><td>Plan creation request → production-ready status</td></tr>
+          <tr><td>Data Ingestion to Processing Latency</td><td>&lt;60 minutes</td><td>File receipt timestamp → validation and reconciliation completion</td></tr>
+          <tr><td>Compliance Validation Coverage</td><td>100% of applicable plans</td><td>Plans with completed compliance validation / total active plans per cycle</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- 12 RISKS -->
+    <!-- 11 RISKS -->
     <div class="cs-section" id="risks">
-      <div class="sec-label">12</div>
+      <div class="sec-label">11</div>
       <h2 class="sec-title">Risk Register</h2>
       <table>
         <thead><tr><th>Category</th><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr></thead>
         <tbody>
           <tr>
             <td class="risk-p"><strong>Product</strong></td>
-            <td>Scope creep in Phase 1 delays MVP</td>
+            <td>Scope creep in Phase 1 delays core platform delivery</td>
             <td><span class="badge badge-med">Medium</span></td>
             <td><span class="badge badge-high">High</span></td>
-            <td>MoSCoW prioritization enforced; feature freeze at Month 2; scope changes require PM sign-off</td>
+            <td>MoSCoW prioritization enforced; feature freeze at Month 2; all scope changes require PM approval with documented trade-off analysis</td>
           </tr>
           <tr>
             <td class="risk-p"><strong>Product</strong></td>
-            <td>Advisor adoption lower than expected due to UX complexity</td>
+            <td>Low advisor and ops team adoption due to workflow change resistance</td>
             <td><span class="badge badge-med">Medium</span></td>
             <td><span class="badge badge-med">Medium</span></td>
-            <td>Usability testing with 5 advisor users in Month 1 prototype; iterative release with feedback loop before GA</td>
+            <td>Early user involvement in design; phased rollout with champion users; in-platform onboarding and guided workflows</td>
           </tr>
           <tr>
             <td class="risk-t"><strong>Technical</strong></td>
-            <td>Custodian feed format inconsistency across DTCC/NSCC variants</td>
+            <td>Inconsistent data formats across fund providers and recordkeepers delay integration</td>
             <td><span class="badge badge-high">High</span></td>
             <td><span class="badge badge-high">High</span></td>
-            <td>Build an adaptable schema mapping layer; validate 3 custodian formats in sandbox before production integration</td>
+            <td>Build configurable schema mapping layer; validate against at least 3 provider formats in sandbox before production cutover</td>
           </tr>
           <tr>
             <td class="risk-t"><strong>Technical</strong></td>
-            <td>Data latency on high-volume payroll events exceeds 10-minute SLA</td>
+            <td>Validation and reconciliation processing latency exceeds SLA under peak load</td>
             <td><span class="badge badge-low">Low</span></td>
             <td><span class="badge badge-high">High</span></td>
-            <td>Load test at 10x expected event volume before launch; Kafka partition scaling plan documented</td>
+            <td>Load test at 5x expected volume pre-launch; event bus auto-scaling configured; processing SLA monitored via CloudWatch alerts</td>
           </tr>
           <tr>
             <td class="risk-r"><strong>Regulatory</strong></td>
-            <td>SECURE 2.0 IRS guidance evolves post-launch, invalidating hardcoded rules</td>
+            <td>SECURE 2.0 IRS guidance updates post-launch invalidate configured compliance rules</td>
             <td><span class="badge badge-med">Medium</span></td>
             <td><span class="badge badge-high">High</span></td>
-            <td>SECURE 2.0 logic externalized into configurable rule engine — not hardcoded; legal review on every IRS Notice cycle</td>
+            <td>Compliance rules externalized into configurable engine; legal review triggered on every IRS Notice release; no hardcoded regulatory logic</td>
           </tr>
           <tr>
             <td class="risk-r"><strong>Regulatory</strong></td>
-            <td>ERISA interpretation differences across plan sponsors creates edge cases</td>
+            <td>ERISA interpretation differences across plan types create validation edge cases</td>
             <td><span class="badge badge-med">Medium</span></td>
             <td><span class="badge badge-med">Medium</span></td>
-            <td>Manual override capability on all automated compliance actions; ERISA counsel review of testing logic pre-launch</td>
+            <td>Manual override capability with approval workflow on all automated compliance actions; ERISA counsel review of rules engine pre-launch</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <!-- 13 MVP RELEASE NOTES -->
+    <!-- 12 MVP RELEASE NOTES -->
     <div class="cs-section" id="mvp">
-      <div class="sec-label">13</div>
+      <div class="sec-label">12</div>
       <h2 class="sec-title">MVP Release Notes — Phase 1</h2>
       <div class="card">
         <div class="card-title" style="font-family:var(--mono);color:var(--accent);">v1.0.0 — Platform Launch</div>
@@ -846,33 +808,33 @@
           <p style="font-size:0.875rem;color:#94A3B8;margin-bottom:1rem;">Target: End of Month 4 · Deployment: AWS (ECS Fargate) · Environment: Production (US-East-1)</p>
           <strong style="font-size:0.8rem;color:var(--text);display:block;margin-bottom:0.5rem;">✅ Included in v1.0.0</strong>
           <div class="chip-row">
-            <span class="chip">Multi-tenant plan data management</span>
-            <span class="chip">Delta-validation compliance alert engine</span>
-            <span class="chip">Advisor unified dashboard (up to 50 plans)</span>
-            <span class="chip">Participant retirement projection tool</span>
-            <span class="chip">ERISA ADP/ACP/Top-Heavy automated testing</span>
-            <span class="chip">SECURE 2.0 auto-enrollment workflow</span>
-            <span class="chip">LTPT eligibility tracking</span>
-            <span class="chip">Immutable audit log (PDF/CSV export)</span>
-            <span class="chip">Custodian feed integration (DTCC/NSCC)</span>
-            <span class="chip">Role-based access control (4 roles)</span>
-            <span class="chip">Exception queue with resolution workflow</span>
-            <span class="chip">SOC 2 Type II security controls</span>
+            <span class="chip">Plan Onboarding &amp; Configuration Workflow</span>
+            <span class="chip">Fund &amp; Plan Data Ingestion Engine</span>
+            <span class="chip">Validation &amp; Reconciliation Engine</span>
+            <span class="chip">Compliance Rules Engine (ERISA &amp; SECURE 2.0)</span>
+            <span class="chip">Exception Management &amp; Resolution Workflow</span>
+            <span class="chip">Operations Console</span>
+            <span class="chip">Advisor Dashboard</span>
+            <span class="chip">Immutable Audit Trail (PDF/CSV export)</span>
+            <span class="chip">Fund Data Provider Integrations</span>
+            <span class="chip">Role-Based Access Control (4 roles)</span>
+            <span class="chip">SOC 2 Type II Security Controls</span>
+            <span class="chip">Operational &amp; Compliance Reporting</span>
           </div>
           <strong style="font-size:0.8rem;color:var(--text);display:block;margin:1rem 0 0.5rem;">🚫 Deferred to v1.1+</strong>
           <div class="chip-row">
-            <span class="chip amber">AI natural language query interface</span>
-            <span class="chip amber">5500 filing pre-fill</span>
-            <span class="chip amber">Student loan match reconciliation</span>
-            <span class="chip amber">Participant nudge engine</span>
-            <span class="chip amber">White-label portal</span>
+            <span class="chip amber">OPS GPT — AI Natural Language Query</span>
+            <span class="chip amber">AI Investigation Assistant</span>
+            <span class="chip amber">Participant Self-Service Portal</span>
+            <span class="chip amber">Advisor Proposal Workflow</span>
+            <span class="chip amber">White-Label Platform</span>
           </div>
           <strong style="font-size:0.8rem;color:var(--text);display:block;margin:1rem 0 0.5rem;">⚠️ Known Limitations at Launch</strong>
           <div style="font-size:0.85rem;color:#94A3B8;line-height:1.65;">
-            · Fund lineup changes require 24-hour propagation window after custodian feed update<br/>
-            · Projection tool uses simplified linear growth model in v1.0; Monte Carlo simulation targeted for v1.2<br/>
-            · ERISA testing supports ADP/ACP and Top-Heavy; 415 limit testing targeted for v1.1<br/>
-            · AI query interface available as opt-in beta for design partners only at launch
+            · Initial release supports pre-configured fund data provider integrations; new provider onboarding requires engineering involvement<br/>
+            · Compliance Rules Engine covers core ERISA and SECURE 2.0 validations; advanced plan-type-specific rules targeted for v1.1<br/>
+            · Reconciliation engine processes end-of-day data files; intraday reconciliation targeted for v1.2<br/>
+            · OPS GPT available as controlled beta for design partner operations teams only at launch
           </div>
         </div>
       </div>
