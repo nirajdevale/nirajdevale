@@ -37,11 +37,13 @@
     }
     .nav-back-top:hover { color: var(--accent); }
 
-    .disclaimer {
-      background: rgba(251,191,36,0.06);
-      border-bottom: 1px solid rgba(251,191,36,0.18);
-      padding: 0.7rem 5%; display: flex; align-items: flex-start; gap: 0.75rem;
-    }
+    .disclaimer{
+    margin-left:240px;
+    width:calc(100% - 240px);
+    margin-top:56px;      /* height of Niraj header */
+    position:relative;
+    z-index:1;
+}
     .disclaimer-text { font-size: 0.8125rem; color: #FCD34D; line-height: 1.5; }
     .disclaimer-text strong { font-weight: 700; }
 
@@ -130,7 +132,7 @@
     nav.toc { display: none; }
 
     /* CONTENT */
-    .cs-content { min-width: 0; padding-top: 100px; }
+    .cs-content { min-width: 0; padding-top: 56px; }
     .cs-hero {
       margin-bottom: 0;
       padding: 4rem 5% 3rem;
@@ -276,7 +278,7 @@
   <a href="index.html" class="nav-back-top">← Back to Portfolio</a>
 </nav>
 
-<div class="disclaimer" style="margin-left:240px; position:fixed; top:56px; left:0; right:0; z-index:89;">
+<div class="disclaimer" style="margin-left:240px">
   <span class="disclaimer-text"><strong>Note:</strong> This is a conceptual product execution framework based on market study and professional experience to demonstrate end-to-end Product Management execution. It does not represent a live, implemented product.</span>
 </div>
 
