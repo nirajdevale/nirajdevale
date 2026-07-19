@@ -37,6 +37,7 @@
     }
     .nav-back-top:hover { color: var(--accent); }
 
+    /* FIX: disclaimer now sits inside page flow, scrolls away naturally */
     .disclaimer {
       background: rgba(251,191,36,0.08);
       border-bottom: 1px solid rgba(251,191,36,0.22);
@@ -234,7 +235,6 @@
       .toc-sidebar { display: none; }
       nav.top-nav { left: 0; padding: 0 5%; }
       .page-layout { margin-left: 0; }
-      .disclaimer { margin-left: 0; }
       footer { margin-left: 0 !important; padding: 1.5rem 5% !important; }
       .data-grid { grid-template-columns: 1fr 1fr; }
       .two-col { grid-template-columns: 1fr; }
@@ -279,9 +279,9 @@
   <a href="index.html" class="nav-back-top">← Back to Portfolio</a>
 </nav>
 
+<!-- FIX: disclaimer now inside page-layout so it scrolls naturally and displays correctly -->
 <div class="page-layout">
 
-  <!-- CONTENT -->
   <div class="cs-content">
 
     <div class="disclaimer">
@@ -291,10 +291,10 @@
     <div class="cs-hero">
       <div class="eyebrow">Conceptual Product Framework · Full Case Study</div>
       <h1 class="cs-hero-title">Next-Gen Retirement Services Fiduciary Platform</h1>
-      <p class="cs-hero-desc">An end-to-end product execution framework covering market study, PRD, user flows, architecture, regulatory integration, technical specifications, and MVP launch planning for a multi-tenant fiduciary platform serving recordkeepers, advisors, and participants.</p>
+      <p class="cs-hero-desc">An end-to-end product execution framework covering market study, PRD, user flows, architecture, regulatory integration, technical specifications, and MVP launch planning for a multi-tenant fiduciary platform serving recordkeepers, advisors and fiduciaries. </p>
       <div class="meta-row">
         <span class="meta-pill">Domain: Retirement / FinTech</span>
-        <span class="meta-pill">Tenants: Recordkeepers · Advisors · Participants</span>
+        <span class="meta-pill">Tenants: Recordkeepers · Advisors . Fiduciary</span>
         <span class="meta-pill">Regulatory: ERISA · SECURE 2.0</span>
         <span class="meta-pill">Type: Conceptual PM Execution</span>
       </div>
@@ -309,16 +309,16 @@
       <p class="prose">The US retirement fiduciary ecosystem is fragmented across recordkeepers, advisors, TPAs, and custodians. Daily plan, participant, and fund files require reconciliation before advisors and participants can rely on the data. Rising SECURE 2.0 requirements, increasing assets under management, and aging legacy systems create strong demand for an AI-assisted fiduciary operating platform.</p>
       <div class="data-grid">
         <div class="data-cell">
-          <div class="data-num">$8–10B</div>
-          <div class="data-desc">Annual US retirement administration software and services TAM</div>
+          <div class="data-num">$350B</div>
+          <div class="data-desc">Fiduciary Services Market</div>
         </div>
         <div class="data-cell">
           <div class="data-num">Mid-Market</div>
           <div class="data-desc">SAM: Recordkeepers and RIAs underserved by both enterprise platforms and point solutions</div>
         </div>
         <div class="data-cell">
-          <div class="data-num">3–5%</div>
-          <div class="data-desc">SOM target through SaaS platform sales and white-label partnerships</div>
+          <div class="data-num">5.5%</div>
+          <div class="data-desc">Projected annual growth of the retirement technology market.</div>
         </div>
       </div>
       <h4>Industry Challenges</h4>
@@ -338,7 +338,7 @@
       <h2 class="sec-title">Problem Statement</h2>
       <p class="prose">Every recordkeeper provides different file formats and business rules. Fiduciaries spend significant effort validating schema, reconciling plans, funds, and participants, investigating exceptions, and preparing audits. Compliance is reactive rather than embedded into operational workflows — creating risk, rework, and SLA exposure across the ecosystem.</p>
       <div class="card">
-        <div class="card-body"><strong>Core Problem:</strong> No unified operating platform exists that combines reconciliation, compliance automation, advisor intelligence, and participant visibility in a single real-time workflow — governed by transparent, auditable business rules.</div>
+        <div class="card-body"><strong>Core Problem:</strong> Current retirement servicing platforms manage core operations but leave critical validation, reconciliation, compliance, and exception management distributed across multiple workflows.</div>
       </div>
     </div>
 
@@ -350,22 +350,26 @@
         <div class="card">
           <div class="card-role">Recordkeeper Ops Analyst</div>
           <div class="card-title">Alex, Operations — Mid-market Recordkeeper</div>
-          <div class="card-body">Spends most of the day reconciling plan documents, fund mappings, participant census files, and fee schedules. Operational issues are usually discovered during audits instead of before client delivery, creating rework and SLA risk. Needs: automated validation, prioritized exception queues, and complete audit visibility.</div>
+          <div class="card-body">Spends most of the day reconciling plan documents, fund mappings, participant census files, and fee schedules. Operational issues are usually discovered during audits instead of before client delivery, creating rework and SLA risk.</div>
+          <div class="card-body">Needs: automated validation, prioritized exception queues, and complete audit visibility.</div>
         </div>
         <div class="card">
           <div class="card-role">Financial Advisor / RIA</div>
           <div class="card-title">Priya, Senior Advisor — $800M AUM Practice</div>
-          <div class="card-body">Manages retirement plans across multiple clients using disconnected advisor portals. Lacks a consolidated view of participant health, compliance status, and investment performance. Needs: a unified dashboard with actionable insights and intelligent alerts.</div>
+          <div class="card-body">Manages retirement plans across multiple clients using disconnected advisor portals. Lacks a consolidated view of plans, compliance status, and investment performance.</div>
+          <div class="card-body">Needs: a unified dashboard with actionable insights and intelligent alerts.</div>
         </div>
         <div class="card">
           <div class="card-role">Fiduciary Manager</div>
           <div class="card-title">Sarah, Senior Fiduciary Manager — Age 46</div>
-          <div class="card-body">Oversees multiple retirement plans, ensuring regulatory compliance and coordinating with recordkeepers and advisors. Reviews plan health, investigates compliance exceptions, and monitors fund and operational changes across clients. Needs: centralized platform with real-time compliance visibility, AI-assisted investigation, and complete audit traceability.</div>
+          <div class="card-body">Oversees multiple retirement plans, ensuring regulatory compliance and coordinating with recordkeepers and advisors. Reviews plans, investigates compliance exceptions, and monitors fund and operational changes across clients. </div>
+          <div class="card-body">Needs: centralized platform with real-time compliance visibility, AI-assisted investigation, and complete audit traceability.</div>
         </div>
         <div class="card">
           <div class="card-role">Compliance Officer</div>
           <div class="card-title">Sandra, Chief Compliance Officer — Regional Recordkeeper</div>
-          <div class="card-body">Oversees ERISA testing, SECURE 2.0 compliance, annual 5500 preparation, and audit readiness across hundreds of retirement plans. Manual compliance reviews consume significant operational effort. Needs: automated testing, structured exception logs, and audit-ready reporting.</div>
+          <div class="card-body">Oversees ERISA testing, SECURE 2.0 compliance, annual 5500 preparation, and audit readiness across hundreds of retirement plans. Manual compliance reviews consume significant operational effort.</div>
+          <div class="card-body">Needs: automated testing, structured exception logs, and audit-ready reporting.</div>
         </div>
       </div>
     </div>
@@ -436,10 +440,10 @@
 
       <h4>Scope — Out (Phase 1)</h4>
       <div class="chip-row">
-        <span class="chip amber">Participant Self-Service Portal</span>
-        <span class="chip amber">AI Participant Chatbot</span>
-        <span class="chip amber">Payroll Management</span>
-        <span class="chip amber">White-label Platform</span>
+        <span class="chip amber">AI-Powered Exception Resolution</span>
+        <span class="chip amber">AI Chatbot</span>
+        <span class="chip amber">Open API &amp; Third-Party Marketplace</span>
+        <span class="chip amber">Cross-Fiduciary &amp; Cross-Plan Benchmarking</span>
         <span class="chip amber">Open API Marketplace</span>
         <span class="chip amber">Cross-Plan Benchmarking</span>
         <span class="chip amber">Predictive Compliance Analytics</span>
@@ -507,50 +511,40 @@
             <marker id="a1r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#F87171"/></marker>
             <marker id="a1p" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#A78BFA"/></marker>
           </defs>
-          <!-- Step 1: External Provider -->
           <rect x="260" y="16" width="200" height="44" rx="8" fill="#1E293B" stroke="#2D3F5A" stroke-width="1.5"/>
           <text x="360" y="34" text-anchor="middle" fill="#94A3B8" font-size="8" letter-spacing="1">TRIGGER</text>
           <text x="360" y="50" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">External Provider Sends Data File</text>
           <line x1="360" y1="60" x2="360" y2="92" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a1)"/>
-          <!-- Step 2: Ingestion -->
           <rect x="250" y="92" width="220" height="44" rx="8" fill="#162032" stroke="#38BDF8" stroke-width="1"/>
           <text x="360" y="110" text-anchor="middle" fill="#38BDF8" font-size="8" letter-spacing="1">SYSTEM</text>
           <text x="360" y="126" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Ingest &amp; Parse Data File</text>
           <line x1="360" y1="136" x2="360" y2="168" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a1)"/>
-          <!-- Step 3: Schema Validation -->
           <rect x="250" y="168" width="220" height="44" rx="8" fill="#162032" stroke="#38BDF8" stroke-width="1"/>
           <text x="360" y="186" text-anchor="middle" fill="#38BDF8" font-size="8" letter-spacing="1">SYSTEM</text>
           <text x="360" y="202" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Schema &amp; Business Rule Validation</text>
           <line x1="360" y1="212" x2="360" y2="246" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a1)"/>
-          <!-- Diamond: Valid? -->
           <polygon points="360,246 430,274 360,302 290,274" fill="#162032" stroke="#2D3F5A" stroke-width="1.5"/>
           <text x="360" y="271" text-anchor="middle" fill="#94A3B8" font-size="8">Records</text>
           <text x="360" y="284" text-anchor="middle" fill="#F8FAFC" font-size="8" font-weight="600">Valid?</text>
-          <!-- YES path right -->
           <line x1="430" y1="274" x2="540" y2="274" stroke="#10B981" stroke-width="1.5" marker-end="url(#a1g)"/>
           <text x="483" y="267" text-anchor="middle" fill="#10B981" font-size="8">Yes</text>
           <rect x="540" y="254" width="150" height="40" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
           <text x="615" y="271" text-anchor="middle" fill="#A7F3D0" font-size="9">Pass to Reconciliation</text>
           <text x="615" y="284" text-anchor="middle" fill="#94A3B8" font-size="8">Engine</text>
-          <!-- NO path down -->
           <line x1="360" y1="302" x2="360" y2="334" stroke="#F87171" stroke-width="1.5" marker-end="url(#a1r)"/>
           <text x="374" y="322" fill="#F87171" font-size="8">No</text>
-          <!-- Exception -->
           <rect x="250" y="334" width="220" height="44" rx="8" fill="#1E293B" stroke="#F87171" stroke-width="1"/>
           <text x="360" y="352" text-anchor="middle" fill="#FCA5A5" font-size="8" letter-spacing="1">SYSTEM</text>
           <text x="360" y="368" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Create Exception Record</text>
           <line x1="360" y1="378" x2="360" y2="410" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a1)"/>
-          <!-- Ops Console -->
           <rect x="250" y="410" width="220" height="44" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
           <text x="360" y="428" text-anchor="middle" fill="#A7F3D0" font-size="8" letter-spacing="1">HUMAN</text>
           <text x="360" y="444" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Ops Console — Analyst Reviews</text>
-          <!-- AI assist left -->
           <rect x="40" y="410" width="160" height="44" rx="8" fill="#162032" stroke="#A78BFA" stroke-width="1"/>
           <text x="120" y="428" text-anchor="middle" fill="#DDD6FE" font-size="8" letter-spacing="1">AI ASSIST</text>
           <text x="120" y="444" text-anchor="middle" fill="#F8FAFC" font-size="9">OPS GPT Summarizes Issue</text>
           <line x1="250" y1="432" x2="200" y2="432" stroke="#A78BFA" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#a1p)"/>
           <line x1="360" y1="454" x2="360" y2="486" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a1)"/>
-          <!-- Resolved -->
           <rect x="250" y="486" width="220" height="44" rx="8" fill="#162032" stroke="#10B981" stroke-width="1"/>
           <text x="360" y="504" text-anchor="middle" fill="#A7F3D0" font-size="8" letter-spacing="1">OUTCOME</text>
           <text x="360" y="520" text-anchor="middle" fill="#F8FAFC" font-size="10" font-weight="600">Exception Resolved &amp; Audit Logged</text>
@@ -566,43 +560,34 @@
             <marker id="a2g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#10B981"/></marker>
             <marker id="a2r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#F87171"/></marker>
           </defs>
-          <!-- Step labels row -->
-          <!-- Box 1: Plan Setup -->
           <rect x="10" y="60" width="120" height="64" rx="8" fill="#1E293B" stroke="#2D3F5A" stroke-width="1.5"/>
           <text x="70" y="80" text-anchor="middle" fill="#94A3B8" font-size="7" letter-spacing="1">ADMIN</text>
           <text x="70" y="96" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Plan Setup &amp;</text>
           <text x="70" y="110" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Configuration</text>
           <line x1="130" y1="92" x2="148" y2="92" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a2)"/>
-          <!-- Box 2: Data Ingestion -->
           <rect x="148" y="60" width="120" height="64" rx="8" fill="#162032" stroke="#38BDF8" stroke-width="1"/>
           <text x="208" y="80" text-anchor="middle" fill="#38BDF8" font-size="7" letter-spacing="1">SYSTEM</text>
           <text x="208" y="96" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Fund &amp; Plan</text>
           <text x="208" y="110" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Data Ingestion</text>
           <line x1="268" y1="92" x2="286" y2="92" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a2)"/>
-          <!-- Box 3: Validation -->
           <rect x="286" y="60" width="120" height="64" rx="8" fill="#162032" stroke="#38BDF8" stroke-width="1"/>
           <text x="346" y="80" text-anchor="middle" fill="#38BDF8" font-size="7" letter-spacing="1">SYSTEM</text>
           <text x="346" y="96" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Validation &amp;</text>
           <text x="346" y="110" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Reconciliation</text>
-          <!-- exception branch down -->
           <line x1="346" y1="124" x2="346" y2="172" stroke="#F87171" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#a2r)"/>
           <rect x="276" y="172" width="140" height="36" rx="6" fill="#1E293B" stroke="#F87171" stroke-width="1"/>
           <text x="346" y="188" text-anchor="middle" fill="#FCA5A5" font-size="8">Exception → Ops Console</text>
           <text x="346" y="200" text-anchor="middle" fill="#94A3B8" font-size="7">Analyst resolves</text>
-          <!-- pass right -->
           <line x1="406" y1="92" x2="424" y2="92" stroke="#10B981" stroke-width="1.5" marker-end="url(#a2g)"/>
-          <!-- Box 4: Compliance -->
           <rect x="424" y="60" width="120" height="64" rx="8" fill="#162032" stroke="#A78BFA" stroke-width="1"/>
           <text x="484" y="80" text-anchor="middle" fill="#DDD6FE" font-size="7" letter-spacing="1">COMPLIANCE</text>
           <text x="484" y="96" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">ERISA &amp; SECURE</text>
           <text x="484" y="110" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">2.0 Rules Engine</text>
           <line x1="544" y1="92" x2="562" y2="92" stroke="#2D3F5A" stroke-width="1.5" marker-end="url(#a2)"/>
-          <!-- Box 5: Advisor -->
           <rect x="562" y="60" width="120" height="64" rx="8" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
           <text x="622" y="80" text-anchor="middle" fill="#A7F3D0" font-size="7" letter-spacing="1">OUTCOME</text>
           <text x="622" y="96" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Advisor Dashboard</text>
           <text x="622" y="110" text-anchor="middle" fill="#F8FAFC" font-size="9" font-weight="600">Live &amp; Audit Logged</text>
-          <!-- Legend -->
           <rect x="10" y="265" width="10" height="10" rx="2" fill="#162032" stroke="#38BDF8"/>
           <text x="26" y="275" fill="#94A3B8" font-size="8">System Processing</text>
           <rect x="160" y="265" width="10" height="10" rx="2" fill="#1E293B" stroke="#10B981"/>
@@ -828,7 +813,7 @@
           <div class="chip-row">
             <span class="chip amber">OPS GPT — AI Natural Language Query</span>
             <span class="chip amber">AI Investigation Assistant</span>
-            <span class="chip amber">Participant Self-Service Portal</span>
+            <span class="chip amber">Open API</span>
             <span class="chip amber">Advisor Proposal Workflow</span>
             <span class="chip amber">White-Label Platform</span>
           </div>
@@ -856,7 +841,6 @@
   const sections = document.querySelectorAll('.cs-section[id]');
   const tocLinks = document.querySelectorAll('.toc-link');
 
-  // Smooth scroll on click
   tocLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
@@ -867,7 +851,6 @@
     });
   });
 
-  // Scroll-spy: highlight active section
   const observerOptions = {
     root: null,
     rootMargin: '-56px 0px -60% 0px',
@@ -881,7 +864,6 @@
         tocLinks.forEach(link => {
           link.classList.toggle('active', link.getAttribute('href') === '#' + id);
         });
-        // Auto-scroll TOC to keep active item visible
         const activeLink = document.querySelector('.toc-link.active');
         if (activeLink) {
           activeLink.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
